@@ -1,7 +1,8 @@
 # Notes d'ING3
-Les notes sont séparés en deux dossiers:
+Les notes sont séparés en 3 dossiers:
 - tronc-commun
 - mti
+- confs
 
 La plupart des notes ont été prises sur HackMD d'où certains sauts de lignes un peu bizarres sur Github.
 
