@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        AWEB - Web architecture - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="AWEB---Web-architecture" data-id="AWEB---Web-architecture"><a class="anchor hidden-xs" href="#AWEB---Web-architecture" title="AWEB---Web-architecture"><span class="octicon octicon-link"></span></a><span>AWEB - Web architecture</span></h1><p><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"><span> Fix me</span><br>
+<img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> Partiels</span><br>
+<img class="emoji" alt=":books:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/books.png"><span> A lire</span><br>
+<img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span> Inconvénients</span><br>
+<img class="emoji" alt=":heavy_plus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_plus_sign.png"><span> Avantages</span></p><blockquote>
+<p><span>24/06/2020</span></p>
+</blockquote><h1 id="Formation-architectures" data-id="Formation-architectures"><a class="anchor hidden-xs" href="#Formation-architectures" title="Formation-architectures"><span class="octicon octicon-link"></span></a><span>Formation architectures</span></h1><h2 id="Requirements" data-id="Requirements"><a class="anchor hidden-xs" href="#Requirements" title="Requirements"><span class="octicon octicon-link"></span></a><span>Requirements</span></h2><ul>
+<li><span>Web app has 2 main components:</span>
+<ul>
+<li><span>Processing (the app, </span><em><span>go, rust, js, php, …</span></em><span>)</span></li>
+<li><span>Storage (usually db, can use call to API REST)</span></li>
+</ul>
+</li>
+<li><span>some other stuff</span>
+<ul>
+<li><span>Caches, tech tools, monitoring, …</span></li>
+<li><span>APM (</span><em><span>New Relic</span></em><span>)</span></li>
+</ul>
+</li>
+<li><span>Une bonne archi peut etre un produit, avec feature et qui coute:</span>
+<ul>
+<li><span>Components coupling will impact the cost. Check les versions des différents composants. Essayer d’éviter les composants qui s’assemblent difficilement (mise à jour importante plus souvent)</span></li>
+<li><span>Modularité ultra importante -&gt; mise à jour facile</span></li>
+</ul>
+</li>
+</ul><h2 id="Architecture-inputs" data-id="Architecture-inputs"><a class="anchor hidden-xs" href="#Architecture-inputs" title="Architecture-inputs"><span class="octicon octicon-link"></span></a><span>Architecture inputs</span></h2><ul>
+<li><span>Expected traffic:</span>
+<ul>
+<li><strong><span>la seule bonne métrique -&gt; requete par seconde</span></strong></li>
+<li><span>pas de requete par ping par seconde</span></li>
+</ul>
+</li>
+<li><span>Volume de données -&gt; impacts storage, backup, …</span></li>
+<li><span>Faire attention au budget alloué (setup budget et maintainance budget)</span></li>
+<li><span>Plan de backup (daily and realtime)</span></li>
+<li><span>Scalability:</span>
+<ul>
+<li><span>Horizontal: more nodes</span></li>
+<li><span>Vertical: more hardware</span></li>
+<li><span>Voir en fonction du traffic attendu</span></li>
+</ul>
+</li>
+<li><span>Expected availability</span>
+<ul>
+<li><span>Number of “nines”</span>
+<ul>
+<li><span>3 nines -&gt; 99.9% -&gt; 9h de  downtime par an</span></li>
+<li><span>4 nines -&gt; 99.99% -&gt; 53 min de downtime par an (</span><em><span>c’est cher et ça se vend cher</span></em><span>)</span></li>
+<li><span>5 nines (Google) -&gt; 99.999% -&gt; 5m de downtime par an</span></li>
+<li><span>Difficile de faire du 99.99 ou plus</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h2 id="Architecture-output" data-id="Architecture-output"><a class="anchor hidden-xs" href="#Architecture-output" title="Architecture-output"><span class="octicon octicon-link"></span></a><span>Architecture output</span></h2><ul>
+<li><span>Une fois que tout est spécifié, on a un DAT (Architecture Specification) -&gt; par les devs pour les devs:</span>
+<ul>
+<li><span>High view schema</span></li>
+<li><span>Flow between modules + protocols + flow data volume</span></li>
+<li><span>Composants avec leurs versions, leurs contraintes et la stratégie de roadmap -&gt; quand est-ce qu’il va falloir faire des mises a jour ?</span>
+<ul>
+<li><span>Contraintes d’OS (difficile de mettre à jour un composant à cause)</span></li>
+<li><span>Contraintes de support des composants</span></li>
+<li><span>…</span></li>
+</ul>
+</li>
+<li><span>Stratégie du cache (CDN, …)</span></li>
+<li><span>Sécurité</span>
+<ul>
+<li><span>Comment je gère la securité?</span></li>
+</ul>
+</li>
+<li><span>Le stockage et comment on l’utilise (relationnel, …)</span></li>
+<li><span>CI / CD strategy</span></li>
+<li><span>Deployment strategy</span></li>
+<li><span>Backup strategy</span>
+<ul>
+<li><span>evite les downtimes</span></li>
+<li><span>si un serveur tombe, passer automatiquement sur un autre serveur</span></li>
+</ul>
+</li>
+<li><span>Disaster Recovery Plan (PRA en français)</span>
+<ul>
+<li><span>si une météorite tombe sur les serveurs, comment je redéploie tout ?</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h3 id="Exemple-de-DAT-sur-Bein-Viparis" data-id="Exemple-de-DAT-sur-Bein-Viparis"><a class="anchor hidden-xs" href="#Exemple-de-DAT-sur-Bein-Viparis" title="Exemple-de-DAT-sur-Bein-Viparis"><span class="octicon octicon-link"></span></a><span>Exemple de DAT sur Bein, Viparis</span></h3><p><span>En pré-prod’, on </span><strong><span>doit</span></strong><span> avoir la meme config que en prod’ (sauf peut-etre au niveau des données).</span></p><h2 id="Infrastructure-components" data-id="Infrastructure-components"><a class="anchor hidden-xs" href="#Infrastructure-components" title="Infrastructure-components"><span class="octicon octicon-link"></span></a><span>Infrastructure components</span></h2><ul>
+<li><span>Firewall: block undesired traffic, usually coming from outside to the inside</span></li>
+<li><span>DMZ: zone between the external and the internal firewall. </span><strong><span>Nothing can go through the DMZ EVER</span><img class="emoji" alt=":exclamation:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/exclamation.png"></strong>
+<ul>
+<li><span>The whole point is to master what’s initiating communication to the inside.</span></li>
+</ul>
+</li>
+<li><span>Some DMZ cannot communicate to the inside, it has to be called </span><em><span>from</span></em><span> the inside:</span>
+<ul>
+<li><span>Usually in strategic systems (banque, health, …)</span></li>
+<li><span>Protege des breches de sécurité à l’intérieur du DMZ</span></li>
+<li><span>Async everything + tout est daté</span></li>
+</ul>
+</li>
+<li><span>NFS: network share</span></li>
+<li><span>VPN: network privé securisé, souvent le lien entre DMZ et internal net</span></li>
+<li><span>HAProxy: load balancer, level 3 (TCP) or 7 (application)</span></li>
+<li><span>Heartbeat: health checker using Virtual IP mechanism</span>
+<ul>
+<li><span>si un noeud est down, bascule automatiquement sur un autre noeud</span></li>
+</ul>
+</li>
+</ul><h2 id="Architecture-components" data-id="Architecture-components"><a class="anchor hidden-xs" href="#Architecture-components" title="Architecture-components"><span class="octicon octicon-link"></span></a><span>Architecture components</span></h2><ul>
+<li><span>HTTP proxy: NGINX / Apache. In charge of HTTPs (ssl), rewrite, …</span></li>
+<li><span>Middlewares: EAI, ESB (entreprise service bus -&gt; bus de communication),</span></li>
+<li><span>Tous ces composants sont mis dans des clusters:</span>
+<ul>
+<li><span>Strat si y a un cluster qui tombe</span></li>
+</ul>
+</li>
+<li><span>quand on use des clusters, il ya deux modes:</span>
+<ul>
+<li><span>Actif/passif: un seul noeud est up, l’autre est pret a etre lancé</span></li>
+<li><span>Actif/actif: tous les noeuds sont up (coutent plus cher et plus d’effort)</span></li>
+</ul>
+</li>
+<li><span>Evidemment, mettre les noeuds sur des serveurs differents. Si un serveur tombe, on ne veut pas perdre tous les noeuds.</span></li>
+</ul><h2 id="Architectures-examples" data-id="Architectures-examples"><a class="anchor hidden-xs" href="#Architectures-examples" title="Architectures-examples"><span class="octicon octicon-link"></span></a><span>Architectures examples</span></h2><p><img src="https://i.imgur.com/cT2hzQM.png" alt=""></p><p><span>master/slave -&gt; Architecture en read/replica.</span><br>
+<span>Quand on utilise un Elastic, il en faut 3… </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></p><p><img src="https://i.imgur.com/CsgwUfw.png" alt=""></p><p><span>On a un cluster de trois serveurs:</span></p><ul>
+<li><span>deux pour le site</span></li>
+<li><span>un pour l’administration</span></li>
+</ul><h2 id="Different-types-of-architecture" data-id="Different-types-of-architecture"><a class="anchor hidden-xs" href="#Different-types-of-architecture" title="Different-types-of-architecture"><span class="octicon octicon-link"></span></a><span>Different types of architecture</span></h2><h3 id="Basic-architecture" data-id="Basic-architecture"><a class="anchor hidden-xs" href="#Basic-architecture" title="Basic-architecture"><span class="octicon octicon-link"></span></a><span>Basic architecture</span></h3><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %0 Pages: 1 -->
+<svg width="216pt" height="188pt" viewBox="0.00 0.00 215.63 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-184 211.6293,-184 211.6293,4 -4,4"></polygon>
+<!-- Users -->
+<g id="node1" class="node">
+<title>Users</title>
+<ellipse fill="none" stroke="#000000" cx="103.8146" cy="-162" rx="33.0411" ry="18"></ellipse>
+<text text-anchor="middle" x="103.8146" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Users</text>
+</g>
+<!-- Firewall -->
+<g id="node2" class="node">
+<title>Firewall</title>
+<ellipse fill="none" stroke="#000000" cx="103.8146" cy="-90" rx="43.4318" ry="18"></ellipse>
+<text text-anchor="middle" x="103.8146" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Firewall</text>
+</g>
+<!-- Users&#45;&gt;Firewall -->
+<g id="edge1" class="edge">
+<title>Users-&gt;Firewall</title>
+<path fill="none" stroke="#000000" d="M103.8146,-143.8314C103.8146,-136.131 103.8146,-126.9743 103.8146,-118.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="107.3147,-118.4132 103.8146,-108.4133 100.3147,-118.4133 107.3147,-118.4132"></polygon>
+</g>
+<!-- Application et Database -->
+<g id="node3" class="node">
+<title>Application et Database</title>
+<ellipse fill="none" stroke="#000000" cx="103.8146" cy="-18" rx="103.6296" ry="18"></ellipse>
+<text text-anchor="middle" x="103.8146" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Application et Database</text>
+</g>
+<!-- Firewall&#45;&gt;Application et Database -->
+<g id="edge2" class="edge">
+<title>Firewall-&gt;Application et Database</title>
+<path fill="none" stroke="#000000" d="M103.8146,-71.8314C103.8146,-64.131 103.8146,-54.9743 103.8146,-46.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="107.3147,-46.4132 103.8146,-36.4133 100.3147,-46.4133 107.3147,-46.4132"></polygon>
+</g>
+</g>
+</svg>
+</pre><ul>
+<li><img class="emoji" alt=":heavy_plus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_plus_sign.png"><span>:</span>
+<ul>
+<li><span>facile à mettre en place</span></li>
+<li><span>pas cher</span></li>
+</ul>
+</li>
+<li><img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span>:</span>
+<ul>
+<li><span>pas d’isolation  (</span><em><span>server tombe, on perd tout</span></em><span>)</span></li>
+<li><span>pas de spare (</span><em><span>pas de backup</span></em><span>)</span></li>
+<li><span>not scalable (</span><em><span>si charge monte -&gt; on est foutu</span></em><span>)</span></li>
+</ul>
+</li>
+</ul><h3 id="Basic-separate-architecture" data-id="Basic-separate-architecture"><a class="anchor hidden-xs" href="#Basic-separate-architecture" title="Basic-separate-architecture"><span class="octicon octicon-link"></span></a><span>Basic separate architecture</span></h3><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %0 Pages: 1 -->
+<svg width="121pt" height="260pt" viewBox="0.00 0.00 121.26 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 117.2597,-256 117.2597,4 -4,4"></polygon>
+<!-- Users -->
+<g id="node1" class="node">
+<title>Users</title>
+<ellipse fill="none" stroke="#000000" cx="56.6298" cy="-234" rx="33.0411" ry="18"></ellipse>
+<text text-anchor="middle" x="56.6298" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Users</text>
+</g>
+<!-- Firewall -->
+<g id="node2" class="node">
+<title>Firewall</title>
+<ellipse fill="none" stroke="#000000" cx="56.6298" cy="-162" rx="43.4318" ry="18"></ellipse>
+<text text-anchor="middle" x="56.6298" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Firewall</text>
+</g>
+<!-- Users&#45;&gt;Firewall -->
+<g id="edge1" class="edge">
+<title>Users-&gt;Firewall</title>
+<path fill="none" stroke="#000000" d="M56.6298,-215.8314C56.6298,-208.131 56.6298,-198.9743 56.6298,-190.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="60.1299,-190.4132 56.6298,-180.4133 53.1299,-190.4133 60.1299,-190.4132"></polygon>
+</g>
+<!-- Application -->
+<g id="node3" class="node">
+<title>Application</title>
+<ellipse fill="none" stroke="#000000" cx="56.6298" cy="-90" rx="56.76" ry="18"></ellipse>
+<text text-anchor="middle" x="56.6298" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Application</text>
+</g>
+<!-- Firewall&#45;&gt;Application -->
+<g id="edge2" class="edge">
+<title>Firewall-&gt;Application</title>
+<path fill="none" stroke="#000000" d="M56.6298,-143.8314C56.6298,-136.131 56.6298,-126.9743 56.6298,-118.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="60.1299,-118.4132 56.6298,-108.4133 53.1299,-118.4133 60.1299,-118.4132"></polygon>
+</g>
+<!-- Database -->
+<g id="node4" class="node">
+<title>Database</title>
+<ellipse fill="none" stroke="#000000" cx="56.6298" cy="-18" rx="46.345" ry="18"></ellipse>
+<text text-anchor="middle" x="56.6298" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Database</text>
+</g>
+<!-- Application&#45;&gt;Database -->
+<g id="edge3" class="edge">
+<title>Application-&gt;Database</title>
+<path fill="none" stroke="#000000" d="M56.6298,-71.8314C56.6298,-64.131 56.6298,-54.9743 56.6298,-46.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="60.1299,-46.4132 56.6298,-36.4133 53.1299,-46.4133 60.1299,-46.4132"></polygon>
+</g>
+</g>
+</svg>
+</pre><ul>
+<li><img class="emoji" alt=":heavy_plus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_plus_sign.png"><span>:</span>
+<ul>
+<li><span>meilleur isolation</span></li>
+</ul>
+</li>
+<li><img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span>:</span>
+<ul>
+<li><span>pas de spare (</span><em><span>pas de backup</span></em><span>)</span></li>
+<li><span>not scalable (</span><em><span>si charge monte -&gt; on est foutu</span></em><span>)</span></li>
+</ul>
+</li>
+</ul><p><span>Bien isolé:</span></p><ul>
+<li><span>on peut dimensionner nos serveurs</span></li>
+<li><span>on peut plus tard avoir une meilleure montée en charge</span></li>
+</ul><h3 id="Basic-architecture-with-replicated-database" data-id="Basic-architecture-with-replicated-database"><a class="anchor hidden-xs" href="#Basic-architecture-with-replicated-database" title="Basic-architecture-with-replicated-database"><span class="octicon octicon-link"></span></a><span>Basic architecture with replicated database</span></h3><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %0 Pages: 1 -->
+<svg width="158pt" height="352pt" viewBox="0.00 0.00 157.62 351.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 347.8)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-347.8 153.6191,-347.8 153.6191,4 -4,4"></polygon>
+<!-- DBS -->
+<g id="node1" class="node">
+<title>DBS</title>
+<ellipse fill="none" stroke="#000000" cx="74.5763" cy="-18" rx="68.8562" ry="18"></ellipse>
+<text text-anchor="middle" x="74.5763" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Database slave</text>
+</g>
+<!-- DBM -->
+<g id="node2" class="node">
+<title>DBM</title>
+<ellipse fill="none" stroke="#000000" cx="74.5763" cy="-106.8" rx="74.6527" ry="18"></ellipse>
+<text text-anchor="middle" x="74.5763" y="-102.6" font-family="Times,serif" font-size="14.00" fill="#000000">Database master</text>
+</g>
+<!-- DBM&#45;&gt;DBS -->
+<g id="edge4" class="edge">
+<title>DBM-&gt;DBS</title>
+<path fill="none" stroke="#000000" d="M74.5763,-88.4006C74.5763,-76.2949 74.5763,-60.2076 74.5763,-46.4674"></path>
+<polygon fill="#000000" stroke="#000000" points="78.0764,-46.072 74.5763,-36.072 71.0764,-46.0721 78.0764,-46.072"></polygon>
+<text text-anchor="middle" x="112.0977" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000"> &nbsp;&nbsp;Replication</text>
+</g>
+<!-- Users -->
+<g id="node3" class="node">
+<title>Users</title>
+<ellipse fill="none" stroke="#000000" cx="74.5763" cy="-325.8" rx="33.0411" ry="18"></ellipse>
+<text text-anchor="middle" x="74.5763" y="-321.6" font-family="Times,serif" font-size="14.00" fill="#000000">Users</text>
+</g>
+<!-- Firewall -->
+<g id="node4" class="node">
+<title>Firewall</title>
+<ellipse fill="none" stroke="#000000" cx="74.5763" cy="-252.8" rx="43.4318" ry="18"></ellipse>
+<text text-anchor="middle" x="74.5763" y="-248.6" font-family="Times,serif" font-size="14.00" fill="#000000">Firewall</text>
+</g>
+<!-- Users&#45;&gt;Firewall -->
+<g id="edge1" class="edge">
+<title>Users-&gt;Firewall</title>
+<path fill="none" stroke="#000000" d="M74.5763,-307.7551C74.5763,-299.6828 74.5763,-289.9764 74.5763,-280.9817"></path>
+<polygon fill="#000000" stroke="#000000" points="78.0764,-280.8903 74.5763,-270.8904 71.0764,-280.8904 78.0764,-280.8903"></polygon>
+</g>
+<!-- Application -->
+<g id="node5" class="node">
+<title>Application</title>
+<ellipse fill="none" stroke="#000000" cx="74.5763" cy="-179.8" rx="56.76" ry="18"></ellipse>
+<text text-anchor="middle" x="74.5763" y="-175.6" font-family="Times,serif" font-size="14.00" fill="#000000">Application</text>
+</g>
+<!-- Firewall&#45;&gt;Application -->
+<g id="edge2" class="edge">
+<title>Firewall-&gt;Application</title>
+<path fill="none" stroke="#000000" d="M74.5763,-234.7551C74.5763,-226.6828 74.5763,-216.9764 74.5763,-207.9817"></path>
+<polygon fill="#000000" stroke="#000000" points="78.0764,-207.8903 74.5763,-197.8904 71.0764,-207.8904 78.0764,-207.8903"></polygon>
+</g>
+<!-- Application&#45;&gt;DBM -->
+<g id="edge3" class="edge">
+<title>Application-&gt;DBM</title>
+<path fill="none" stroke="#000000" d="M74.5763,-161.7551C74.5763,-153.6828 74.5763,-143.9764 74.5763,-134.9817"></path>
+<polygon fill="#000000" stroke="#000000" points="78.0764,-134.8903 74.5763,-124.8904 71.0764,-134.8904 78.0764,-134.8903"></polygon>
+</g>
+</g>
+</svg>
+</pre><ul>
+<li><span>Replication:</span>
+<ul>
+<li><span>si le master tombe, le slave devient le master</span></li>
+<li><span>le slave demande au master les binary logs depuis “tel moment”</span></li>
+<li><span>le slave est un live backer</span></li>
+</ul>
+</li>
+<li><img class="emoji" alt=":heavy_plus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_plus_sign.png"><span>:</span>
+<ul>
+<li><span>Better isolation</span></li>
+<li><span>Database spare</span></li>
+</ul>
+</li>
+<li><img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span>:</span>
+<ul>
+<li><span>not scalable</span></li>
+</ul>
+</li>
+</ul><p><span>Le master/slave ne peut scaler qu’en lecture:</span></p><ul>
+<li><span>comme on peut lire sur tout le monde, plus on ajoute de slaves, plus on va absorber de charge de lecture.</span></li>
+<li><span>on ne peut pas scaler en écriture car il n’y a qu’un seul noeud</span></li>
+</ul><p><span>On lit 4 fois de plus que l’on écrit.</span><br>
+<span>Techniques:</span><br>
+<span>- charber (on peut utiliser le calcul de tous les noeuds, bien pour la performance)</span></p><h2 id="Load-balancing-and-failover" data-id="Load-balancing-and-failover"><a class="anchor hidden-xs" href="#Load-balancing-and-failover" title="Load-balancing-and-failover"><span class="octicon octicon-link"></span></a><span>Load balancing and failover</span></h2><ul>
+<li><strong><span>Load balancing</span></strong><span>:</span>
+<ul>
+<li><span>Balance request processing between different host</span></li>
+</ul>
+</li>
+<li><strong><span>Failover</span></strong><span>:</span>
+<ul>
+<li><span>comment je fais pour re-router le traffic vers un nouveau noeud si y a un crash</span></li>
+<li><span>increase reliability</span></li>
+<li><span>SPOF (Single Point of Failure) are to be avoided -&gt; si y a un noeud qui tombe, tout tombe -&gt; à éviter</span></li>
+<li><span>de préférence, automatiquement revenir à la normale</span></li>
+</ul>
+</li>
+</ul><h2 id="Problems-with-multiple-nodes" data-id="Problems-with-multiple-nodes"><a class="anchor hidden-xs" href="#Problems-with-multiple-nodes" title="Problems-with-multiple-nodes"><span class="octicon octicon-link"></span></a><span>Problems with multiple nodes</span></h2><ul>
+<li><span>besoin de partager l’info entre les différents noeuds</span></li>
+<li><span>database:</span>
+<ul>
+<li><span>pas de probleme, les serveurs de la db peuvent etre partagés</span></li>
+</ul>
+</li>
+<li><span>session d’utilisateurs:</span>
+<ul>
+<li><span>généralement liée à un frontend en particulier</span></li>
+<li><span>comment je fais quand je vais sur un autre noeud pour savoir si je suis bien connecté ?</span></li>
+</ul>
+</li>
+<li><span>fichier média:</span>
+<ul>
+<li><span>upload sur un frontend</span></li>
+</ul>
+</li>
+<li><span>cache pas valide:</span>
+<ul>
+<li><span>meme probleme que pour les sessions</span></li>
+<li><span>new content purges cache on one frontend, not on all the others -&gt; inconsistency</span></li>
+</ul>
+</li>
+</ul><h2 id="User-sessions" data-id="User-sessions"><a class="anchor hidden-xs" href="#User-sessions" title="User-sessions"><span class="octicon octicon-link"></span></a><span>User sessions</span></h2><ul>
+<li><span>Affinité de sessions</span>
+<ul>
+<li><span>load balancer va toujours diriger un meme user vers un meme serveur</span></li>
+<li><span>bad behaviours when frontend fails</span></li>
+</ul>
+</li>
+<li><span>Centralisation:</span>
+<ul>
+<li><span>En base de données</span></li>
+<li><span>Dans un store dédié (redis, …)</span></li>
+<li><span>Token JWT</span></li>
+<li><img class="emoji" alt=":exclamation:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/exclamation.png"><span> Don’t create another SPOF</span></li>
+</ul>
+</li>
+<li><span>Distibution entre tous les fronts</span>
+<ul>
+<li><span>cluster: multicast new sessions to all frontends</span></li>
+</ul>
+</li>
+</ul><p><strong><span>Stateless</span></strong><span> et </span><strong><span>Stateful</span></strong></p><ul>
+<li><span>Stateful:</span>
+<ul>
+<li><span>lié au serveur front, s’il meurt on perd le state</span></li>
+<li><span>pas besoin d’un autre storage, on utilise la mémoire du noeud courant</span></li>
+<li><span>meme charge sur tous les noeuds</span></li>
+</ul>
+</li>
+<li><span>Stateless:</span>
+<ul>
+<li><span>on a besoin d’un storage pour le state</span></li>
+<li><span>pas de data attaché entre nous et le noeud</span></li>
+<li><span>pure scalability of front servers, tant que le storage scale</span></li>
+<li><span>on peut aller sur n’importe quel noeud sur n’importe quel front</span></li>
+</ul>
+</li>
+<li><span>Both are based on a cookie ID, one use to find the node, the other to request the storage</span></li>
+</ul><h2 id="Media" data-id="Media"><a class="anchor hidden-xs" href="#Media" title="Media"><span class="octicon octicon-link"></span></a><span>Media</span></h2><ul>
+<li><span>centralization</span>
+<ul>
+<li><span>database (huge binaries in DB, …)</span></li>
+<li><span>file share (NFS, Samba, …) -&gt; le chemin vers ces fichiers là sont mis en bdd</span></li>
+</ul>
+</li>
+<li><span>distribution to all frontends:</span>
+<ul>
+<li><span>modify the upload feature to upload to all frontend</span></li>
+<li><span>Use a file replication tool (rsync, …)</span></li>
+</ul>
+</li>
+</ul><h2 id="Cache" data-id="Cache"><a class="anchor hidden-xs" href="#Cache" title="Cache"><span class="octicon octicon-link"></span></a><span>Cache</span></h2><ul>
+<li><span>centralization:</span>
+<ul>
+<li><span>cache en bdd (pre-computed stuff)</span></li>
+<li><span>storage dédié</span>
+<ul>
+<li><span>Memcached (se dit memcache) -&gt; key/value mais pas de sauvegarde</span></li>
+<li><span>Redis -&gt; key/value avec sauvegarde sur le filesystem (en background si besoin)</span></li>
+<li><span>Varnish -&gt; Cache protocol + HTTP cache</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Distribution to all frontend thanks to dedicated tools</span>
+<ul>
+<li><span>Mettre un cache et il va etre partagé entre tous ses noeuds</span></li>
+<li><span>EHCache</span></li>
+<li><span>Hazelcast</span></li>
+<li><span>XAP</span></li>
+<li><span>Etcd</span></li>
+</ul>
+</li>
+</ul><h2 id="Double-frontend-database-replication-" data-id="Double-frontend-database-replication-"><a class="anchor hidden-xs" href="#Double-frontend-database-replication-" title="Double-frontend-database-replication-"><span class="octicon octicon-link"></span></a><span>Double frontend, database replication </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></h2><p><span>schema</span></p><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %0 Pages: 1 -->
+<svg width="8pt" height="8pt" viewBox="0.00 0.00 8.00 8.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 4)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-4 4,-4 4,4 -4,4"></polygon>
+</g>
+</svg>
+</pre><h2 id="Multiple-frontends-" data-id="Multiple-frontends-"><a class="anchor hidden-xs" href="#Multiple-frontends-" title="Multiple-frontends-"><span class="octicon octicon-link"></span></a><span>Multiple frontends </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></h2><p><span>schema</span></p><h2 id="Multiple-frontends-with-read-write-split-" data-id="Multiple-frontends-with-read-write-split-"><a class="anchor hidden-xs" href="#Multiple-frontends-with-read-write-split-" title="Multiple-frontends-with-read-write-split-"><span class="octicon octicon-link"></span></a><span>Multiple frontends with read-write split </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></h2><p><span>schema</span></p><ul>
+<li><span>Avoir la techno qui share le read-only ou le write -&gt; pas de PHP</span></li>
+</ul><h2 id="Multiple-frontend-with-read-balancing-" data-id="Multiple-frontend-with-read-balancing-"><a class="anchor hidden-xs" href="#Multiple-frontend-with-read-balancing-" title="Multiple-frontend-with-read-balancing-"><span class="octicon octicon-link"></span></a><span>Multiple frontend with read balancing </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></h2><p><span>schema</span></p><blockquote>
+<p><span>02/07/2020</span></p>
+</blockquote><h2 id="Cloud" data-id="Cloud"><a class="anchor hidden-xs" href="#Cloud" title="Cloud"><span class="octicon octicon-link"></span></a><span>Cloud</span></h2><ul>
+<li><span>Google Cloud va disparaitre</span></li>
+</ul><p><span>Les 3 catégories de Cloud sont </span><strong><span>SaaS</span></strong><span>, </span><strong><span>PaaS</span></strong><span> et </span><strong><span>IaaS</span></strong><span>.</span><br>
+<img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"></p><h3 id="SaaS" data-id="SaaS"><a class="anchor hidden-xs" href="#SaaS" title="SaaS"><span class="octicon octicon-link"></span></a><span>SaaS:</span></h3><ul>
+<li><span>Same software for everyone + plugins</span></li>
+<li><span>You don’t have to deal with anything</span></li>
+<li><span>but the customization is limited as you use the same app than everyone (il faut rester dans le standard)</span></li>
+<li><span>Salesforces, Google Apps, …</span></li>
+<li><span>Technique de multi-tenancy</span></li>
+<li><span>Utilisateur se connecte -&gt; tenant id:</span>
+<ul>
+<li><span>Cet id est passé de facon automatique à l’app</span></li>
+<li><span>L’app partout utilise ce tenant id</span></li>
+<li><span>Répartition en base de données</span></li>
+<li><span>Très pratique pour cloisonner la donnée</span></li>
+</ul>
+</li>
+</ul><h3 id="PaaS" data-id="PaaS"><a class="anchor hidden-xs" href="#PaaS" title="PaaS"><span class="octicon octicon-link"></span></a><span>PaaS:</span></h3><ul>
+<li><span>meme plateforme d’exécution pour tout le monde</span></li>
+<li><span>on peut développer n’importe quoi qui est autorisé par la plateforme</span></li>
+<li><span>Limited to techs the platform allows</span></li>
+<li><span>déploiement tres facile mais on n’a pas la main dessus</span></li>
+<li><a href="http://Platform.sh" target="_blank" rel="noopener"><span>Platform.sh</span></a><span>, Google App Engine, Heroku, …</span></li>
+<li><span>Suffisant pour la majorité des cas</span></li>
+<li><span>iPaaS</span></li>
+<li><span>tout ce qui est environnement d’exécution, briques auto-managées</span></li>
+<li><span>Pour démarrer des projets très rapidement, c’est top</span></li>
+</ul><h3 id="IaaS" data-id="IaaS"><a class="anchor hidden-xs" href="#IaaS" title="IaaS"><span class="octicon octicon-link"></span></a><span>IaaS:</span></h3><ul>
+<li><span>Same physical server for everyone</span></li>
+<li><span>You are free to do whatever you like but you are responsible for everything</span></li>
+<li><span>Déploiement de la tech qu’on veut</span></li>
+<li><span>Les boites qui proposent du IaaS tendent à proposer du PaaS</span></li>
+<li><span>AWS, Azure, Google Cloud, Ali Baba Cloud, …</span></li>
+<li><span>on-premise solution with virtualization handled for you</span></li>
+<li><span>Très très libre, on peut mettre ce que l’on veut -&gt; mais responsable de tout</span></li>
+<li><span>Des toolings systèmes</span></li>
+</ul><h3 id="Hybride-Cloud" data-id="Hybride-Cloud"><a class="anchor hidden-xs" href="#Hybride-Cloud" title="Hybride-Cloud"><span class="octicon octicon-link"></span></a><span>Hybride Cloud</span></h3><ul>
+<li><span>Mélange du on-premise et du cloud</span></li>
+<li><span>Problématiques:</span>
+<ul>
+<li><span>Gestion des identités entre le cloud et le non-cloud</span></li>
+<li><span>Partage de données par APIs</span></li>
+</ul>
+</li>
+</ul><h3 id="Sous-catégories-de-SaaS-PaaS-IaaS" data-id="Sous-catégories-de-SaaS-PaaS-IaaS"><a class="anchor hidden-xs" href="#Sous-catégories-de-SaaS-PaaS-IaaS" title="Sous-catégories-de-SaaS-PaaS-IaaS"><span class="octicon octicon-link"></span></a><span>Sous-catégories de SaaS, PaaS, IaaS</span></h3><ul>
+<li><span>DaaS</span></li>
+<li><span>…</span></li>
+</ul><h3 id="Multi-cloud" data-id="Multi-cloud"><a class="anchor hidden-xs" href="#Multi-cloud" title="Multi-cloud"><span class="octicon octicon-link"></span></a><span>Multi cloud</span></h3><ul>
+<li><span>Aller chez plusieurs providers cloud et rester indépendant</span></li>
+<li><span>Eviter de mettre tous son taff au meme endroit</span></li>
+</ul><h2 id="Architecture-styles" data-id="Architecture-styles"><a class="anchor hidden-xs" href="#Architecture-styles" title="Architecture-styles"><span class="octicon octicon-link"></span></a><span>Architecture styles</span></h2><ul>
+<li><img class="emoji" alt=":books:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/books.png"><span> </span><a href="https://martinfowler.com/" target="_blank" rel="noopener"><span>Blog de Martin Fowler</span></a></li>
+</ul><h3 id="Microservices-" data-id="Microservices-"><a class="anchor hidden-xs" href="#Microservices-" title="Microservices-"><span class="octicon octicon-link"></span></a><span>Microservices </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></h3><p><strong><span>Micro-services are a small amount of logic, exposing a stable API and using its own storage.</span></strong><span>:</span></p><ul>
+<li><span>API est stable, à jour et documentée</span></li>
+<li><span>Le stockage est lié au micro-service</span></li>
+<li><span>Si on partage le stockage entre plusieurs micro-services, c’est pas des micro-services -&gt; ce sont des modules</span></li>
+<li><span>Un stockage par micro-service</span></li>
+<li><span>Exemples de microservices:</span>
+<ul>
+<li><span>une gestion d’utilisateur</span></li>
+<li><span>une gestion de commande</span></li>
+</ul>
+</li>
+<li><span>Micro-services d’orchestration:</span>
+<ul>
+<li><span>micro-services qui appelle d’autres micro-services</span></li>
+<li><span>pas forcément de stockage</span></li>
+</ul>
+</li>
+<li><span>When doing micro-services, you deploy a bunch of small modules, independent from each other</span>
+<ul>
+<li><span>Unitairement, plus facile à déployer. Collectivement, c’est compliqué (à cause des dépendances).</span></li>
+<li><span>si un module casse, seul le micro-service est cassé</span></li>
+<li><span>stockage différent par micro-service -&gt; stockage spécifique pour un micro-service spécifique</span>
+<ul>
+<li><span>Le stockage qui convient à la problématique du micro-service</span></li>
+</ul>
+</li>
+<li><span>Polyglotisme très facile à faire (micro-services dans le langage qui faut).</span>
+<ul>
+<li><span>On évite de faire ça dans la vraie vie</span></li>
+<li><span>coût non négligeable de maintenir plusieurs stacks/compétences</span></li>
+</ul>
+</li>
+<li><span>Industrialisation du déploiement</span>
+<ul>
+<li><span>qu’on puisse redéployer un micro-service très rapidement</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Here are the drawbacks of micro-services architecture no one talks about (for now):</span>
+<ul>
+<li><span>Data is spread across multiple storages, so you have to either duplicate it, or get it and process it with code</span>
+<ul>
+<li><span>Lors d’un changement de la data, il faut informer les autres micro-services -&gt; service de messagerie à implém’</span></li>
+</ul>
+</li>
+<li><span>logs are spread across multiple node, even for a single process. You need to get them in one place to analyze things. Plus, you need a way to group them (process id).</span>
+<ul>
+<li><span>service de gestion de logs à implém’</span></li>
+</ul>
+</li>
+<li><span>Transactions are a nightmare since you can only rollback manually by defining a rollback plan for a cross micro-service transactional operation.</span></li>
+<li><span>You must maintain your API or you will impact everyone and loose the decoupling benefits.</span></li>
+<li><span>With many micro-services, you’ll need a gateway (like Netflix Zuul)</span></li>
+</ul>
+</li>
+<li><span>Dans les micro-services, ce sont des microliths.</span></li>
+</ul><h3 id="Monolithic" data-id="Monolithic"><a class="anchor hidden-xs" href="#Monolithic" title="Monolithic"><span class="octicon octicon-link"></span></a><span>Monolithic</span></h3><p><span>Quand on fait pas du micro-service:</span></p><ul>
+<li><span>on déploie tout (API, controllers, view, DAO, …) ou rien</span></li>
+<li><span>donc déploiement facile</span></li>
+<li><span>Any call is a “</span><em><span>code</span></em><span>” call (method, script, class) and that’s a </span><em><span>lot</span></em><span> easier to debug and to maintain (si c’est bien fait)</span></li>
+</ul><h2 id="ESB" data-id="ESB"><a class="anchor hidden-xs" href="#ESB" title="ESB"><span class="octicon octicon-link"></span></a><span>ESB</span></h2><p><span>Entreprise Service Bus</span></p><h3 id="Focus-on-ESB" data-id="Focus-on-ESB"><a class="anchor hidden-xs" href="#Focus-on-ESB" title="Focus-on-ESB"><span class="octicon octicon-link"></span></a><span>Focus on ESB</span></h3><ul>
+<li><span>When connecting a lot of software components, we can end up like this: (</span><em><span>image</span></em><span>)</span>
+<ul>
+<li><span>tous les fils au milieu sont uniquement des relations point à point</span>
+<ul>
+<li><img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span> point &lt;-&gt; point deviennent vite du point &lt;-&gt; multi-points</span></li>
+</ul>
+</li>
+<li><span>la doc était bonne un jour puis elle n’a pas été mise à jour donc elle n’est plus à jour</span></li>
+</ul>
+</li>
+<li><span>Tight coupling</span></li>
+<li><span>mise à jour d’un composant va impacter les autres en cascade</span></li>
+<li><span>tous les déploiements sont cassés et ont un impact sur plein de composants</span></li>
+</ul><p><span>Utilisation d’un </span><strong><span>bus d’entreprise</span></strong><span>:</span></p><ul>
+<li><span>fournit une abstraction pour les composants</span></li>
+<li><span>Pas de connexion vers l’extérieur, souvent qqchose de très interne</span></li>
+<li><span>Obligé de mettre du fail over sur du ESB</span></li>
+<li><span>no one knows about anyone, only the bus</span></li>
+<li><span>the bus is in charge of maintaining API compatibility</span></li>
+<li><span>many API version at the same time can be deployed</span></li>
+<li><span>service unavailibility strategies</span></li>
+<li><span>flow monitoring</span></li>
+<li><span>get async for free</span></li>
+<li><span>Disadvantages:</span>
+<ul>
+<li><span>Single point of failure, tout peut tomber</span></li>
+<li><span>communication plus lente</span></li>
+</ul>
+</li>
+</ul><h3 id="ESB-main-features" data-id="ESB-main-features"><a class="anchor hidden-xs" href="#ESB-main-features" title="ESB-main-features"><span class="octicon octicon-link"></span></a><span>ESB main features</span></h3><ul>
+<li><span>connait tous les protocoles (</span><em><span>AMQP, REST, SOAP, JMS, …</span></em><span>)</span></li>
+<li><span>conversion de format (</span><em><span>xml -&gt; json, soap -&gt; rest</span></em><span>)</span></li>
+<li><span>monitoring</span></li>
+<li><span>save error for retry</span></li>
+<li><span>can define complex routes once and for all, not in all components</span></li>
+</ul><h3 id="ESB-Flow-Example" data-id="ESB-Flow-Example"><a class="anchor hidden-xs" href="#ESB-Flow-Example" title="ESB-Flow-Example"><span class="octicon octicon-link"></span></a><span>ESB Flow Example</span></h3><p><img src="https://i.imgur.com/qY3fL8T.png" alt=""></p><ul>
+<li><span>MuleSoft - Mule ESB (Open source)</span></li>
+<li><span>Talent (Open source)</span></li>
+<li><span>Axway</span></li>
+</ul><h3 id="API-Manager" data-id="API-Manager"><a class="anchor hidden-xs" href="#API-Manager" title="API-Manager"><span class="octicon octicon-link"></span></a><span>API Manager</span></h3><ul>
+<li><span>Qu’est ce qu’on veut exposer de l’API au monde ?</span></li>
+<li><span>Proche de l’ESB vu que ça expose l’API de l’ESB hors du subnet</span></li>
+<li><span>Located in the DMZ</span></li>
+<li><span>In charge of:</span>
+<ul>
+<li><span>API endpoints</span></li>
+<li><span>Auth &amp; registration</span></li>
+<li><span>throttling (limitation du nombre d’appels)</span></li>
+<li><span>API documentation (Swagger)</span></li>
+<li><span>Proxying with some simplification for the outside world</span></li>
+</ul>
+</li>
+<li><span>Gravitee, Kong, WSO2 API manager, …</span></li>
+</ul><blockquote>
+<p><span>16/07/2020</span></p>
+</blockquote><h1 id="Data-storages" data-id="Data-storages"><a class="anchor hidden-xs" href="#Data-storages" title="Data-storages"><span class="octicon octicon-link"></span></a><span>Data storages</span></h1><h2 id="Schema-design" data-id="Schema-design"><a class="anchor hidden-xs" href="#Schema-design" title="Schema-design"><span class="octicon octicon-link"></span></a><span>Schema design</span></h2><h3 id="Normal-forms" data-id="Normal-forms"><a class="anchor hidden-xs" href="#Normal-forms" title="Normal-forms"><span class="octicon octicon-link"></span></a><span>Normal forms</span></h3><p><span>Les </span><strong><span>formes normales</span></strong><span> sont des règles qui dictent des choses à respecter quand on modélise une bdd en relationnel pour s’assurer que ce que l’on va faire est vraiment fiable, ACID et surtout manipulable et la modélisation est bonne pour le projet.</span></p><ul>
+<li><img class="emoji" alt=":heavy_plus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_plus_sign.png"><span>:</span>
+<ul>
+<li><span>fiable, compréhensible et rigide</span></li>
+<li><span>moins de boulot pour le dev</span></li>
+</ul>
+</li>
+<li><img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span>:</span>
+<ul>
+<li><span>moins de souplesse</span></li>
+<li><span>performance dégradée pour récupérer toutes les infos</span></li>
+<li><span>jointure à faire</span></li>
+</ul>
+</li>
+</ul><p><span>Parmi les formes normales les plus connues, on a:</span></p><ul>
+<li><span>1NF: pas de groupe qui se répète</span></li>
+<li><span>2NF: pas de clé qui pourrait etre un attribut primaire et qui ne l’est pas indiqué et qui dépend d’un probleme fonctionnel</span></li>
+<li><span>3NF</span></li>
+<li><span>…</span></li>
+</ul><h3 id="RDBMS-schema-design-vs-noSQL-schema-design" data-id="RDBMS-schema-design-vs-noSQL-schema-design"><a class="anchor hidden-xs" href="#RDBMS-schema-design-vs-noSQL-schema-design" title="RDBMS-schema-design-vs-noSQL-schema-design"><span class="octicon octicon-link"></span></a><span>RDBMS schema design vs noSQL schema design</span></h3><p><span>RDBMS: Relational Database Management System</span></p><p><span>Quand on fait du noSQL, il faut se dire: “comment je vais exploiter la donnée ?”</span></p><p><span>RDBMS:</span></p><ul>
+<li><span>Normal forms:</span>
+<ul>
+<li><span>respect requires to think in terms of entities</span></li>
+<li><span>do not allow schema design based on per request needs</span></li>
+</ul>
+</li>
+</ul><p><span>NoSQL:</span></p><ul>
+<li><span>“schemaless” -&gt; notre schema casse les formes normales</span></li>
+<li><span>le schema est basée sur les besoins et pas sur les entités</span></li>
+</ul><h2 id="DBMS-principles" data-id="DBMS-principles"><a class="anchor hidden-xs" href="#DBMS-principles" title="DBMS-principles"><span class="octicon octicon-link"></span></a><span>DBMS principles</span></h2><p><span>DBMS: Database Management System</span></p><h3 id="Table-EAV" data-id="Table-EAV"><a class="anchor hidden-xs" href="#Table-EAV" title="Table-EAV"><span class="octicon octicon-link"></span></a><span>Table EAV</span></h3><ul>
+<li><img class="emoji" alt=":heavy_plus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_plus_sign.png"><span> beaucoup plus simple pour ajouter des caractéristiques sachant qu’on ne sait pas à l’avance ce que ce sera</span></li>
+</ul><p><span>Sans EAV:</span></p><table>
+<thead>
+<tr>
+<th><span>id</span></th>
+<th><span>name</span></th>
+<th><span>price</span></th>
+<th><span>pointure</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>4</span></td>
+<td><span>A</span></td>
+<td><span>4.0</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span>5</span></td>
+<td><span>B</span></td>
+<td><span>2.4</span></td>
+<td><span>44</span></td>
+</tr>
+</tbody>
+</table><p><span>Avec EAV, on fait une meta-table:</span></p><table>
+<thead>
+<tr>
+<th><span>Entity id</span></th>
+<th><span>Attribute id</span></th>
+<th><span>Value</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>4</span></td>
+<td><span>1</span></td>
+<td><span>A</span></td>
+</tr>
+<tr>
+<td><span>4</span></td>
+<td><span>2</span></td>
+<td><span>4.0</span></td>
+</tr>
+<tr>
+<td><span>5</span></td>
+<td><span>1</span></td>
+<td><span>B</span></td>
+</tr>
+<tr>
+<td><span>5</span></td>
+<td><span>2</span></td>
+<td><span>2.4</span></td>
+</tr>
+<tr>
+<td><span>5</span></td>
+<td><span>3</span></td>
+<td><span>44</span></td>
+</tr>
+</tbody>
+</table><p><img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span> On doit avoir une table EAV par type de valeur (bool, float, int) par type de produit:</span></p><ul>
+<li><span>pour le produit “Gourde”:</span>
+<ul>
+<li><span>table EAV pour les entiers</span></li>
+<li><span>table EAV pour les float</span></li>
+</ul>
+</li>
+<li><span>pour le produit “Tartiflette”:</span>
+<ul>
+<li><span>table EAV pour les entiers</span></li>
+<li><span>table EAV pour les float</span></li>
+</ul>
+</li>
+<li><span>…</span></li>
+</ul><h3 id="ACID" data-id="ACID"><a class="anchor hidden-xs" href="#ACID" title="ACID"><span class="octicon octicon-link"></span></a><span>ACID</span></h3><h4 id="ACID-properties" data-id="ACID-properties"><a class="anchor hidden-xs" href="#ACID-properties" title="ACID-properties"><span class="octicon octicon-link"></span></a><span>ACID properties:</span></h4><ul>
+<li><strong><span>Atomicity</span></strong><span>: tout ou rien</span></li>
+<li><strong><span>Consistence</span></strong><span>: tout le monde peut voir la donnée et ne vous répond que quand la donnée a bien été modifié</span></li>
+<li><strong><span>Isolation</span></strong><span>: chaque donnée est isolée les unes des autres. Notre data est versionnée.</span></li>
+<li><strong><span>Durabilité</span></strong><span>: quand le systeme fail, toutes les transactions réussies ne sont pas perdues</span></li>
+</ul><p><span>Les transactions doivent etre les plus courtes possibles car elles sont cached dans la RAM.</span></p><h4 id="ACID-Conclusion" data-id="ACID-Conclusion"><a class="anchor hidden-xs" href="#ACID-Conclusion" title="ACID-Conclusion"><span class="octicon octicon-link"></span></a><span>ACID: Conclusion</span></h4><ul>
+<li><span>quasi toutes les solutions SQL sont ACID</span></li>
+<li><img class="emoji" alt=":heavy_minus_sign:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_minus_sign.png"><span> etre ACID -&gt; etre lent</span></li>
+<li><span>la plupart des solutions NoSQL utilises quelques parties ACID mais pas toutes</span></li>
+<li><span>les solutions NoSQL utilisent souvent BASE (Basically Available, Soft State, Eventual consistence)</span></li>
+</ul><h3 id="CAP" data-id="CAP"><a class="anchor hidden-xs" href="#CAP" title="CAP"><span class="octicon octicon-link"></span></a><span>CAP</span></h3><h4 id="CAP-Theorem" data-id="CAP-Theorem"><a class="anchor hidden-xs" href="#CAP-Theorem" title="CAP-Theorem"><span class="octicon octicon-link"></span></a><span>CAP Theorem</span></h4><p><span>Sur la </span><strong><span>Consistence</span></strong><span>, la </span><strong><span>Availability</span></strong><span> (</span><em><span>Disponibilité</span></em><span>) et la </span><strong><span>Partition tolerance</span></strong><span>, on ne peut en avoir que deux.</span></p><ul>
+<li><span>CA:</span>
+<ul>
+<li><span>RDBMS</span></li>
+</ul>
+</li>
+<li><span>CP:</span>
+<ul>
+<li><span>MongoDB</span></li>
+<li><span>Redis</span></li>
+</ul>
+</li>
+<li><span>AP:</span>
+<ul>
+<li><span>Cassandra</span></li>
+<li><span>CouchDB</span></li>
+</ul>
+</li>
+</ul><h4 id="Choosing-the-right-solution" data-id="Choosing-the-right-solution"><a class="anchor hidden-xs" href="#Choosing-the-right-solution" title="Choosing-the-right-solution"><span class="octicon octicon-link"></span></a><span>Choosing the right solution</span></h4><ul>
+<li><span>Pour scale horizontalement, on veut le P !</span></li>
+<li><span>SQL -&gt; besoin de consistence (CA)</span></li>
+<li><span>NoSQL -&gt; si on a besoin de scalabilité et souplesse (souvent CP ou AP)</span></li>
+<li><span>tout ce qui est non transactionnel, on peut largement utiliser du BASE</span></li>
+<li><span>utiliser du NoSQL ne veut pas dire qu’il ne faut pas utiliser RDBMS</span></li>
+<li><span>“on devrait dire NoSQL pour Not Only SQL au lieu de NoSQL”</span></li>
+<li><span>en fonction du besoin et du CAP theorème, choisir la solution</span></li>
+</ul><h3 id="DMBS-overview" data-id="DMBS-overview"><a class="anchor hidden-xs" href="#DMBS-overview" title="DMBS-overview"><span class="octicon octicon-link"></span></a><span>DMBS overview</span></h3><ul>
+<li><span>relationnel (</span><em><span>psql, mysql, sql server, oracle, …</span></em><span>)</span>
+<ul>
+<li><span>mariadb: le vrai mysql -&gt; open source</span></li>
+<li><span>percona: très bien en monitoring et performance paske bien tuné</span></li>
+<li><span>psql: le plus complet, le plus avancé et le plus performant</span></li>
+</ul>
+</li>
+<li><span>key/value (</span><em><span>memcached, redis, …</span></em><span>)</span>
+<ul>
+<li><span>très bien pour le cache</span></li>
+<li><span>pour les problèmes simples</span></li>
+<li><span>hyper rapide (</span><em><span>si on veut faire beaucoup de requetes</span></em><span>)</span></li>
+<li><span>quand le probleme devient assez complexe, la modélisation clé/valeur est assez compliquée à suivre</span></li>
+<li><span>scalabilité en écriture, on oublie. Chacun son tour pour écrire.</span></li>
+</ul>
+</li>
+<li><span>orienté document (</span><em><span>mongodb, couchdb, elastic, solar, …</span></em><span>)</span>
+<ul>
+<li><span>un peu plus structuré car document et collections</span></li>
+<li><span>sharding de données (</span><em><span>garantit que si un noeud tombe, on n’est pas dead</span></em><span>):</span>
+<ol>
+<li><span>on découpe la donnée</span></li>
+<li><span>on met la donnée un peu partout sur les noeuds</span></li>
+<li><span>on créé des replicas</span></li>
+</ol>
+</li>
+<li><span>le sharding permet de distribuer les calculs</span>
+<ul>
+<li><span>distribue sur les noeuds du cluster</span></li>
+<li><span>plus rapide à plusieurs que tout seul</span></li>
+<li><span>augment la vitesse de reponse</span></li>
+<li><span>augmente la capacité à absorber de la charge en </span><em><span>lecture</span></em></li>
+</ul>
+</li>
+<li><span>master à élection -&gt; cluster avec master élue</span></li>
+<li><span>c’est le master qui décide où on peut ecrire</span>
+<ul>
+<li><span>c’est moins couteux d’ecrire mais cela reste couteux</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>orienté graphe (</span><em><span>neo4j, orientdb, …</span></em><span>)</span>
+<ul>
+<li><span>gestion d’arborescence</span></li>
+<li><span>recommandation produit en fonction des poids sur les arcs</span></li>
+<li><span>relation entre les objets à des profondeurs non déterminées (</span><em><span>parcours d’un graphe</span></em><span>)</span></li>
+<li><span>héritage qui peut se décrire sous forme d’un graphe</span></li>
+<li><span>ce qu’on peut pas faire (</span><em><span>ou difficilement</span></em><span>) en SQL, on peut le faire en graphe</span></li>
+<li><span>pour des besoins bien particuliers</span></li>
+<li><span>bien les bases graphes, mais grave cheres (</span><em><span>pour neo4j</span></em><span>)</span></li>
+</ul>
+</li>
+<li><span>orienté colonnes (</span><em><span>hbase, cassandra, …</span></em><span>)</span>
+<ul>
+<li><span>très rapide en lecture</span></li>
+<li><span>mais très très lent en ecriture</span></li>
+<li><span>seules dbs qui fournissent de la scalabilité linéaire en ecriture</span></li>
+<li><span>on peut predire combien de temps ca va prendre à s’executer</span></li>
+</ul>
+</li>
+</ul><h3 id="NoSQL-product-overview" data-id="NoSQL-product-overview"><a class="anchor hidden-xs" href="#NoSQL-product-overview" title="NoSQL-product-overview"><span class="octicon octicon-link"></span></a><span>NoSQL product overview</span></h3><h4 id="Simple-keyvalue-Memcached" data-id="Simple-keyvalue-Memcached"><a class="anchor hidden-xs" href="#Simple-keyvalue-Memcached" title="Simple-keyvalue-Memcached"><span class="octicon octicon-link"></span></a><span>Simple key/value: Memcached</span></h4><ul>
+<li><span>key/value</span></li>
+<li><span>n’écrit jamais sur le disque, toujours en mémoire</span></li>
+<li><span>va vite</span></li>
+<li><span>algo de hachage de distribution coté client</span></li>
+</ul><p><span>Server commands:</span></p><ul>
+<li><span>get/set</span></li>
+<li><span>add (create only)</span></li>
+<li><span>delete</span></li>
+<li><span>cas (check and set)</span></li>
+<li><span>incr / decr</span></li>
+<li><span>stats: combien de fois on a lu dans le cache</span></li>
+<li><span>flush_all: vire tout</span></li>
+</ul><p><span>On peut décider d’avoir une base clé/valeur ou quand on fait un get, toutes les infos sont là. Ou d’avoir les infos éclatées en plusieurs valeurs. Voir en fonction du besoin.</span></p><h4 id="Advanced-keyvalue-Redis" data-id="Advanced-keyvalue-Redis"><a class="anchor hidden-xs" href="#Advanced-keyvalue-Redis" title="Advanced-keyvalue-Redis"><span class="octicon octicon-link"></span></a><span>Advanced key/value: Redis</span></h4><ul>
+<li><span>vrai data store, il va save</span></li>
+<li><span>types complexes</span></li>
+<li><span>protocole texte (</span><em><span>de base, c’est du binary</span></em><span>) -&gt; pratique pour debug</span></li>
+<li><span>peut écrire sur le disque -&gt; écrit vraiment sur le disque avant de dire qu’il a fait le boulot</span></li>
+<li><span>par défaut, il n’écrit pas -&gt; volatilité de la data (</span><em><span>TTL ou date d’expiration</span></em><span>)</span></li>
+<li><span>meme histoire de hash que pour memcached (</span><em><span>distributed only if client implements consistent hashing</span></em><span>)</span></li>
+<li><span>C’est atomique. Redis est mono-thread. Donc chacun son tour.</span></li>
+<li><span>fichiers de journalisation</span></li>
+</ul><h5 id="Retwis" data-id="Retwis"><a class="anchor hidden-xs" href="#Retwis" title="Retwis"><span class="octicon octicon-link"></span></a><span>Retwis</span></h5><p><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></p><h4 id="Document-oriented-Elastic" data-id="Document-oriented-Elastic"><a class="anchor hidden-xs" href="#Document-oriented-Elastic" title="Document-oriented-Elastic"><span class="octicon octicon-link"></span></a><span>Document oriented: Elastic</span></h4><ul>
+<li><span>schemaless: elements created on the fly</span></li>
+<li><span>nested documents</span></li>
+<li><span>sharding -&gt; répartition de la data (master du cluster qui s’en occupe)</span></li>
+<li><span>master/slave replication + election -&gt; si le master meurt, les slaves élisent un nouveau master (3 nodes needed)</span></li>
+<li><span>replica sets: automatic failover and recovery</span></li>
+<li><span>offers full-text search</span></li>
+<li><span>offers great math tools</span></li>
+</ul><h4 id="Column-oriented-Cassandra" data-id="Column-oriented-Cassandra"><a class="anchor hidden-xs" href="#Column-oriented-Cassandra" title="Column-oriented-Cassandra"><span class="octicon octicon-link"></span></a><span>Column oriented: Cassandra</span></h4><ul>
+<li><span>L’orienté colonne, c’est des sets de Key/Value groupés sur une clés. C’est de l’orienté document, mais le stockage se fait par colonne: id, name, age, sexe, …</span></li>
+<li><span>C’est comme un index. Cool pour lire, moins cool pour écrire.</span></li>
+</ul><h1 id="SSO--Single-Sign-On" data-id="SSO--Single-Sign-On"><a class="anchor hidden-xs" href="#SSO--Single-Sign-On" title="SSO--Single-Sign-On"><span class="octicon octicon-link"></span></a><span>SSO = Single Sign-On</span></h1><p><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"><br>
+<span>SSO, c’est un peu comme le ESB. Si on le met des le depart, ca va etre beaucoup moins cher a l’avenir. Si on doit le rajouter apres, ca va couter cher et chiant a mettre en place.</span></p><h2 id="Pourquoi" data-id="Pourquoi"><a class="anchor hidden-xs" href="#Pourquoi" title="Pourquoi"><span class="octicon octicon-link"></span></a><span>Pourquoi?</span></h2><h2 id="Un-truc-" data-id="Un-truc-"><a class="anchor hidden-xs" href="#Un-truc-" title="Un-truc-"><span class="octicon octicon-link"></span></a><span>Un truc </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></h2><ul>
+<li><span>Les users n’ont pas a taper leurs mdp plusieurs fois.</span></li>
+</ul><h3 id="Sécurité" data-id="Sécurité"><a class="anchor hidden-xs" href="#Sécurité" title="Sécurité"><span class="octicon octicon-link"></span></a><span>Sécurité</span></h3><ul>
+<li><span>la sécurité</span>
+<ul>
+<li><span>il faut expirer la session</span>
+<ul>
+<li><span>mettre des sessions journalieres</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>quand on resilie les comptes, on coupe partout</span></li>
+</ul><h3 id="Architecture" data-id="Architecture"><a class="anchor hidden-xs" href="#Architecture" title="Architecture"><span class="octicon octicon-link"></span></a><span>Architecture</span></h3><p><span>Authentication is an abstract layer:</span></p><ul>
+<li><span>config centralisé pour les annuaires</span></li>
+<li><span>une API pour toutes les webapps</span></li>
+<li><span>delegate authentication duties</span></li>
+</ul><h2 id="Types" data-id="Types"><a class="anchor hidden-xs" href="#Types" title="Types"><span class="octicon octicon-link"></span></a><span>Types</span></h2><h3 id="Trust-tier" data-id="Trust-tier"><a class="anchor hidden-xs" href="#Trust-tier" title="Trust-tier"><span class="octicon octicon-link"></span></a><span>Trust tier</span></h3><p><span>Responsable pour l’authentification et la transmission aux webapps:</span></p><ul>
+<li><span>CAS (</span><em><span>protocole et produit</span></em><span>)</span>
+<ul>
+<li><span>marche tres bien</span></li>
+<li><span>et depuis tres longtemps</span></li>
+</ul>
+</li>
+<li><span>Kerberos</span>
+<ul>
+<li><span>se branche tres bien sur des reverse proxy http</span></li>
+<li><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></li>
+</ul>
+</li>
+<li><span>Shibboleth (</span><em><span>produit qui implem’ oauth</span></em><span>)</span></li>
+<li><span>FederId (</span><em><span>porté par RedHat</span></em><span>)</span></li>
+</ul><p><span>Brancher un SSO avec du CAS prend tout au plus un jour. Ce qui prend du temps, c’est la liaison avec des apps.</span></p><h3 id="Domain-cookies" data-id="Domain-cookies"><a class="anchor hidden-xs" href="#Domain-cookies" title="Domain-cookies"><span class="octicon octicon-link"></span></a><span>Domain cookies</span></h3><p><span>Il existe le SSO du pauvre.</span><br>
+<span>Quand on s’authentifie sur un site web, on a un cookie qui est posé.</span><br>
+<span>Browser transmits autenthication through a domain cookie:</span></p><ul>
+<li><span>facile a mettre en place</span></li>
+<li><span>leger</span></li>
+<li><span>pas cher</span></li>
+<li><span>un domaine parent pour toutes les applications est necessaire</span></li>
+</ul><h2 id="Centralize-account-informations" data-id="Centralize-account-informations"><a class="anchor hidden-xs" href="#Centralize-account-informations" title="Centralize-account-informations"><span class="octicon octicon-link"></span></a><span>Centralize account informations</span></h2><p><span>LDAP</span><br>
+<span>Necessaire pour tout systeme SSO!:</span></p><ul>
+<li><span>tous les comptes sont connus par le SSO</span></li>
+<li><span>avoir un dossier centralisé</span></li>
+<li><span>il faut arriver à réconcilier les utilisateurs</span></li>
+<li><span>set l’autorisation pour utiliser ce dossier centralisé</span></li>
+</ul><p><span>Centralisation des infos utilisateurs c’est pas si facile. C’est ce qui prend le plus de temps.</span></p><h2 id="Contraintes" data-id="Contraintes"><a class="anchor hidden-xs" href="#Contraintes" title="Contraintes"><span class="octicon octicon-link"></span></a><span>Contraintes</span></h2><ul>
+<li><span>difficile de se faire passer pour qqu’un (</span><em><span>les apps n’ont plus accès aux mdp</span></em><span>)</span></li>
+<li><span>le SSO oblige tout le temps d’etre sur une page de connexion centralisée (</span><em><span>peut dérouter l’utilisateur</span></em><span>)</span></li>
+<li><span>logout, </span><strong><span>c’est compliqué</span></strong></li>
+</ul><p><span>Les comptes techniques avec accès large, c’est une faille de sécurité énorme.</span></p><h2 id="CAS-Central-Authentication-Service" data-id="CAS-Central-Authentication-Service"><a class="anchor hidden-xs" href="#CAS-Central-Authentication-Service" title="CAS-Central-Authentication-Service"><span class="octicon octicon-link"></span></a><span>CAS: Central Authentication Service</span></h2><ul>
+<li><span>created by Yale University</span></li>
+<li><span>très populaire pour l’education</span></li>
+<li><span>ecrit en Spring WebFlow</span></li>
+<li><span>clients pour Java, PHP, .NET</span></li>
+</ul><hr><h1 id="Misc" data-id="Misc"><a class="anchor hidden-xs" href="#Misc" title="Misc"><span class="octicon octicon-link"></span></a><span>Misc</span></h1><ul>
+<li><span>gRPC c’est cool pour envoyer de la data</span>
+<ul>
+<li><span>gestion de flux variants</span></li>
+<li><span>pour streamer de la vidéo</span></li>
+</ul>
+</li>
+</ul></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#AWEB---Web-architecture" title="AWEB - Web architecture">AWEB - Web architecture</a></li>
+<li><a href="#Formation-architectures" title="Formation architectures">Formation architectures</a><ul class="nav">
+<li><a href="#Requirements" title="Requirements">Requirements</a></li>
+<li><a href="#Architecture-inputs" title="Architecture inputs">Architecture inputs</a></li>
+<li><a href="#Architecture-output" title="Architecture output">Architecture output</a><ul class="nav">
+<li><a href="#Exemple-de-DAT-sur-Bein-Viparis" title="Exemple de DAT sur Bein, Viparis">Exemple de DAT sur Bein, Viparis</a></li>
+</ul>
+</li>
+<li><a href="#Infrastructure-components" title="Infrastructure components">Infrastructure components</a></li>
+<li><a href="#Architecture-components" title="Architecture components">Architecture components</a></li>
+<li><a href="#Architectures-examples" title="Architectures examples">Architectures examples</a></li>
+<li><a href="#Different-types-of-architecture" title="Different types of architecture">Different types of architecture</a><ul class="nav">
+<li><a href="#Basic-architecture" title="Basic architecture">Basic architecture</a></li>
+<li><a href="#Basic-separate-architecture" title="Basic separate architecture">Basic separate architecture</a></li>
+<li><a href="#Basic-architecture-with-replicated-database" title="Basic architecture with replicated database">Basic architecture with replicated database</a></li>
+</ul>
+</li>
+<li><a href="#Load-balancing-and-failover" title="Load balancing and failover">Load balancing and failover</a></li>
+<li><a href="#Problems-with-multiple-nodes" title="Problems with multiple nodes">Problems with multiple nodes</a></li>
+<li><a href="#User-sessions" title="User sessions">User sessions</a></li>
+<li><a href="#Media" title="Media">Media</a></li>
+<li><a href="#Cache" title="Cache">Cache</a></li>
+<li><a href="#Double-frontend-database-replication-" title="Double frontend, database replication ">Double frontend, database replication </a></li>
+<li><a href="#Multiple-frontends-" title="Multiple frontends ">Multiple frontends </a></li>
+<li><a href="#Multiple-frontends-with-read-write-split-" title="Multiple frontends with read-write split ">Multiple frontends with read-write split </a></li>
+<li><a href="#Multiple-frontend-with-read-balancing-" title="Multiple frontend with read balancing ">Multiple frontend with read balancing </a></li>
+<li><a href="#Cloud" title="Cloud">Cloud</a><ul class="nav">
+<li><a href="#SaaS" title="SaaS:">SaaS:</a></li>
+<li><a href="#PaaS" title="PaaS:">PaaS:</a></li>
+<li><a href="#IaaS" title="IaaS:">IaaS:</a></li>
+<li><a href="#Hybride-Cloud" title="Hybride Cloud">Hybride Cloud</a></li>
+<li><a href="#Sous-catégories-de-SaaS-PaaS-IaaS" title="Sous-catégories de SaaS, PaaS, IaaS">Sous-catégories de SaaS, PaaS, IaaS</a></li>
+<li><a href="#Multi-cloud" title="Multi cloud">Multi cloud</a></li>
+</ul>
+</li>
+<li><a href="#Architecture-styles" title="Architecture styles">Architecture styles</a><ul class="nav">
+<li><a href="#Microservices-" title="Microservices ">Microservices </a></li>
+<li><a href="#Monolithic" title="Monolithic">Monolithic</a></li>
+</ul>
+</li>
+<li><a href="#ESB" title="ESB">ESB</a><ul class="nav">
+<li><a href="#Focus-on-ESB" title="Focus on ESB">Focus on ESB</a></li>
+<li><a href="#ESB-main-features" title="ESB main features">ESB main features</a></li>
+<li><a href="#ESB-Flow-Example" title="ESB Flow Example">ESB Flow Example</a></li>
+<li><a href="#API-Manager" title="API Manager">API Manager</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Data-storages" title="Data storages">Data storages</a><ul class="nav">
+<li><a href="#Schema-design" title="Schema design">Schema design</a><ul class="nav">
+<li><a href="#Normal-forms" title="Normal forms">Normal forms</a></li>
+<li><a href="#RDBMS-schema-design-vs-noSQL-schema-design" title="RDBMS schema design vs noSQL schema design">RDBMS schema design vs noSQL schema design</a></li>
+</ul>
+</li>
+<li><a href="#DBMS-principles" title="DBMS principles">DBMS principles</a><ul class="nav">
+<li><a href="#Table-EAV" title="Table EAV">Table EAV</a></li>
+<li><a href="#ACID" title="ACID">ACID</a></li>
+<li><a href="#CAP" title="CAP">CAP</a></li>
+<li><a href="#DMBS-overview" title="DMBS overview">DMBS overview</a></li>
+<li><a href="#NoSQL-product-overview" title="NoSQL product overview">NoSQL product overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#SSO--Single-Sign-On" title="SSO = Single Sign-On">SSO = Single Sign-On</a><ul class="nav">
+<li><a href="#Pourquoi" title="Pourquoi?">Pourquoi?</a></li>
+<li><a href="#Un-truc-" title="Un truc ">Un truc </a><ul class="nav">
+<li><a href="#Sécurité" title="Sécurité">Sécurité</a></li>
+<li><a href="#Architecture" title="Architecture">Architecture</a></li>
+</ul>
+</li>
+<li><a href="#Types" title="Types">Types</a><ul class="nav">
+<li><a href="#Trust-tier" title="Trust tier">Trust tier</a></li>
+<li><a href="#Domain-cookies" title="Domain cookies">Domain cookies</a></li>
+</ul>
+</li>
+<li><a href="#Centralize-account-informations" title="Centralize account informations">Centralize account informations</a></li>
+<li><a href="#Contraintes" title="Contraintes">Contraintes</a></li>
+<li><a href="#CAS-Central-Authentication-Service" title="CAS: Central Authentication Service">CAS: Central Authentication Service</a></li>
+</ul>
+</li>
+<li><a href="#Misc" title="Misc">Misc</a></li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#AWEB---Web-architecture" title="AWEB - Web architecture">AWEB - Web architecture</a></li>
+<li><a href="#Formation-architectures" title="Formation architectures">Formation architectures</a><ul class="nav">
+<li><a href="#Requirements" title="Requirements">Requirements</a></li>
+<li><a href="#Architecture-inputs" title="Architecture inputs">Architecture inputs</a></li>
+<li><a href="#Architecture-output" title="Architecture output">Architecture output</a><ul class="nav">
+<li><a href="#Exemple-de-DAT-sur-Bein-Viparis" title="Exemple de DAT sur Bein, Viparis">Exemple de DAT sur Bein, Viparis</a></li>
+</ul>
+</li>
+<li><a href="#Infrastructure-components" title="Infrastructure components">Infrastructure components</a></li>
+<li><a href="#Architecture-components" title="Architecture components">Architecture components</a></li>
+<li><a href="#Architectures-examples" title="Architectures examples">Architectures examples</a></li>
+<li><a href="#Different-types-of-architecture" title="Different types of architecture">Different types of architecture</a><ul class="nav">
+<li><a href="#Basic-architecture" title="Basic architecture">Basic architecture</a></li>
+<li><a href="#Basic-separate-architecture" title="Basic separate architecture">Basic separate architecture</a></li>
+<li><a href="#Basic-architecture-with-replicated-database" title="Basic architecture with replicated database">Basic architecture with replicated database</a></li>
+</ul>
+</li>
+<li><a href="#Load-balancing-and-failover" title="Load balancing and failover">Load balancing and failover</a></li>
+<li><a href="#Problems-with-multiple-nodes" title="Problems with multiple nodes">Problems with multiple nodes</a></li>
+<li><a href="#User-sessions" title="User sessions">User sessions</a></li>
+<li><a href="#Media" title="Media">Media</a></li>
+<li><a href="#Cache" title="Cache">Cache</a></li>
+<li><a href="#Double-frontend-database-replication-" title="Double frontend, database replication ">Double frontend, database replication </a></li>
+<li><a href="#Multiple-frontends-" title="Multiple frontends ">Multiple frontends </a></li>
+<li><a href="#Multiple-frontends-with-read-write-split-" title="Multiple frontends with read-write split ">Multiple frontends with read-write split </a></li>
+<li><a href="#Multiple-frontend-with-read-balancing-" title="Multiple frontend with read balancing ">Multiple frontend with read balancing </a></li>
+<li><a href="#Cloud" title="Cloud">Cloud</a><ul class="nav">
+<li><a href="#SaaS" title="SaaS:">SaaS:</a></li>
+<li><a href="#PaaS" title="PaaS:">PaaS:</a></li>
+<li><a href="#IaaS" title="IaaS:">IaaS:</a></li>
+<li><a href="#Hybride-Cloud" title="Hybride Cloud">Hybride Cloud</a></li>
+<li><a href="#Sous-catégories-de-SaaS-PaaS-IaaS" title="Sous-catégories de SaaS, PaaS, IaaS">Sous-catégories de SaaS, PaaS, IaaS</a></li>
+<li><a href="#Multi-cloud" title="Multi cloud">Multi cloud</a></li>
+</ul>
+</li>
+<li><a href="#Architecture-styles" title="Architecture styles">Architecture styles</a><ul class="nav">
+<li><a href="#Microservices-" title="Microservices ">Microservices </a></li>
+<li><a href="#Monolithic" title="Monolithic">Monolithic</a></li>
+</ul>
+</li>
+<li><a href="#ESB" title="ESB">ESB</a><ul class="nav">
+<li><a href="#Focus-on-ESB" title="Focus on ESB">Focus on ESB</a></li>
+<li><a href="#ESB-main-features" title="ESB main features">ESB main features</a></li>
+<li><a href="#ESB-Flow-Example" title="ESB Flow Example">ESB Flow Example</a></li>
+<li><a href="#API-Manager" title="API Manager">API Manager</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Data-storages" title="Data storages">Data storages</a><ul class="nav">
+<li><a href="#Schema-design" title="Schema design">Schema design</a><ul class="nav">
+<li><a href="#Normal-forms" title="Normal forms">Normal forms</a></li>
+<li><a href="#RDBMS-schema-design-vs-noSQL-schema-design" title="RDBMS schema design vs noSQL schema design">RDBMS schema design vs noSQL schema design</a></li>
+</ul>
+</li>
+<li><a href="#DBMS-principles" title="DBMS principles">DBMS principles</a><ul class="nav">
+<li><a href="#Table-EAV" title="Table EAV">Table EAV</a></li>
+<li><a href="#ACID" title="ACID">ACID</a></li>
+<li><a href="#CAP" title="CAP">CAP</a></li>
+<li><a href="#DMBS-overview" title="DMBS overview">DMBS overview</a></li>
+<li><a href="#NoSQL-product-overview" title="NoSQL product overview">NoSQL product overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#SSO--Single-Sign-On" title="SSO = Single Sign-On">SSO = Single Sign-On</a><ul class="nav">
+<li><a href="#Pourquoi" title="Pourquoi?">Pourquoi?</a></li>
+<li><a href="#Un-truc-" title="Un truc ">Un truc </a><ul class="nav">
+<li><a href="#Sécurité" title="Sécurité">Sécurité</a></li>
+<li><a href="#Architecture" title="Architecture">Architecture</a></li>
+</ul>
+</li>
+<li><a href="#Types" title="Types">Types</a><ul class="nav">
+<li><a href="#Trust-tier" title="Trust tier">Trust tier</a></li>
+<li><a href="#Domain-cookies" title="Domain cookies">Domain cookies</a></li>
+</ul>
+</li>
+<li><a href="#Centralize-account-informations" title="Centralize account informations">Centralize account informations</a></li>
+<li><a href="#Contraintes" title="Contraintes">Contraintes</a></li>
+<li><a href="#CAS-Central-Authentication-Service" title="CAS: Central Authentication Service">CAS: Central Authentication Service</a></li>
+</ul>
+</li>
+<li><a href="#Misc" title="Misc">Misc</a></li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

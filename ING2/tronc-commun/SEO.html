@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        SEO - Méthodes d&apos;Optimisation pour les moteurs de recherche - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><p><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"><span> FIXME</span><br>
+<img class="emoji" alt=":books:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/books.png"><span> A lire</span><br>
+<img class="emoji" alt=":movie_camera:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/movie_camera.png"><span> Timing dans video</span></p><h1 id="SEO---Méthodes-d’Optimisation-pour-les-moteurs-de-recherche" data-id="SEO---Méthodes-d’Optimisation-pour-les-moteurs-de-recherche"><a class="anchor hidden-xs" href="#SEO---Méthodes-d’Optimisation-pour-les-moteurs-de-recherche" title="SEO---Méthodes-d’Optimisation-pour-les-moteurs-de-recherche"><span class="octicon octicon-link"></span></a><span>SEO - Méthodes d’Optimisation pour les moteurs de recherche</span></h1><hr><blockquote style="border-left-color: brown;">
+<p><span class="color" data-color="brown"></span><span> Cours SEO 03 avril 2020</span></p>
+</blockquote><h1 id="Introduction" data-id="Introduction"><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><span class="octicon octicon-link"></span></a><span>Introduction</span></h1><h2 id="Petit-historique" data-id="Petit-historique"><a class="anchor hidden-xs" href="#Petit-historique" title="Petit-historique"><span class="octicon octicon-link"></span></a><span>Petit historique</span></h2><ul>
+<li><span>1945: Vannerbush -&gt; MEMEX</span></li>
+<li><span>1957: Mec d’IBM -&gt;</span></li>
+<li><span>60-70: Gerard Salton (Cornell) -&gt; IR, Modèle vectoriel</span>
+<ul>
+<li><span>Il a créé un algo utilisé aux années 2000</span></li>
+<li><span>Très utilisé car continuité</span></li>
+</ul>
+</li>
+<li><span>1989: Tim Berners-Lee invente le web (www)</span>
+<ul>
+<li><span>Le bouquin Alexandria à lire</span></li>
+<li><span>Quentin Jardon</span></li>
+</ul>
+</li>
+<li><span>1991:</span>
+<ul>
+<li><span>Le www est rendu public</span></li>
+</ul>
+</li>
+<li><span>1990: Les moteurs de recherche commencent à apparaitre</span>
+<ul>
+<li><span>Archie (Alan Emtage - McGill)</span></li>
+</ul>
+</li>
+<li><span>1994: Lycos</span>
+<ul>
+<li><span>Premier gros moteur de recherche</span></li>
+</ul>
+</li>
+<li><span>1994: Moteur de recherche Yahoo (Stanford)</span></li>
+<li><span>1995: Moteur de recherche Altavista (par Louis Monier)</span></li>
+<li><span>1998: Moteur de recherche Google (Brin et Larry Page)</span>
+<ul>
+<li><span>Bouquin sur Google “In the plex”</span></li>
+<li><span>Brin a mis en place les enchères au second prix pour les pubs</span></li>
+<li><span>les enchères Vickrey</span></li>
+</ul>
+</li>
+<li><span>1998 - 2010: Moteur de recherche MSN Search / Bing</span></li>
+<li><span>2013: Moteur de recherche Qwant</span></li>
+<li><span>Hector Garcia-Molina et Leslie Lemporte et Vandamme (qui a bossé sur la synthèse d’image)</span></li>
+<li><span>Les “nouveaux”:</span>
+<ul>
+<li><span>Yann Lecun (directeur scientifique de Facebook)</span></li>
+<li><span>Geoffrey Hinton</span></li>
+<li><span>Yoshua Bengio</span></li>
+<li><span>Andrew Ng</span></li>
+<li><span>Les pères du machine learning</span></li>
+</ul>
+</li>
+<li><span>Le vrai “nouveau”:</span>
+<ul>
+<li><span>Algo qui défonce tout depuis 1970 -&gt; Word2Vec</span></li>
+<li><span>Fasttext -&gt; algo de chez Facebook</span></li>
+</ul>
+</li>
+<li><span>Faiss (je sais pas ce que c’est)</span></li>
+</ul><h2 id="Définitions" data-id="Définitions"><a class="anchor hidden-xs" href="#Définitions" title="Définitions"><span class="octicon octicon-link"></span></a><span>Définitions</span></h2><ul>
+<li><strong><span>Moteur de recherche:</span></strong><span> site dont la vocation est de renvoyer des résultats pertinents pour une requête donnée</span></li>
+<li><strong><span>Web:</span></strong><span> un grand graphe</span></li>
+<li><span>Un </span><strong><span>besoin informationnel</span></strong><span>  est un sujet sur lequel un utilisateur veut se renseigner:</span>
+<ul>
+<li><span>C’est parfois mal défini, ambigu</span>
+<ul>
+<li><span>si la requête est Paris, quel besoin avons nous ? La ville de Paris ? Les paris ? Paris Hilton ?</span></li>
+</ul>
+</li>
+<li><span>Il est différent potentiellement pour chaque personne</span></li>
+<li><span>Une </span><strong><span>requête</span></strong><span>, c’est ce que l’utilisateur écrit pour communiquer son besoin informationnel</span></li>
+<li><span>ce qui compte ce n’est pas ce que l’on a écrit mais ce que l’on aurait dû écrire si on savait bien écrire</span></li>
+<li><span>un document est pertinent pour une requête s’il répond au besoin info sous-jacent</span></li>
+</ul>
+</li>
+<li><span>Une </span><strong><span>SERP</span></strong><span> (</span><em><span>search engine result page</span></em><span>)</span>
+<ul>
+<li><span>les dix premières pages de pages web mise en avant</span></li>
+</ul>
+</li>
+</ul><h3 id="Des-chiffres" data-id="Des-chiffres"><a class="anchor hidden-xs" href="#Des-chiffres" title="Des-chiffres"><span class="octicon octicon-link"></span></a><span>Des chiffres</span></h3><ul>
+<li><strong><span>85%</span></strong><span> des gens s’arrêtent à la première page de résultats de Google</span></li>
+<li><strong><span>75%</span></strong><span> des requêtes ne sont pas reformulées</span></li>
+</ul><h2 id="Schema-global-du-moteur" data-id="Schema-global-du-moteur"><a class="anchor hidden-xs" href="#Schema-global-du-moteur" title="Schema-global-du-moteur"><span class="octicon octicon-link"></span></a><span>Schema global du moteur</span></h2><p><span>page 24 du pdf</span></p><h3 id="Learning-to-rank" data-id="Learning-to-rank"><a class="anchor hidden-xs" href="#Learning-to-rank" title="Learning-to-rank"><span class="octicon octicon-link"></span></a><span>Learning to rank</span></h3><ul>
+<li><span>Ranknet</span></li>
+<li><span>fait une pondération arbitraire et créé des classements</span></li>
+<li><span>algo qui calibre le moteur de recherche pour avoir une pondération des pages qui satisfait les utilisateurs (</span><em><span>reçoit un feedback des utilisateurs en fonction de ce qu’ils ont cliqué/visité pour ajuster</span></em><span>)</span></li>
+<li><span>il est là pour arbitrer tous les signaux</span></li>
+</ul><h2 id="Indexation-par-le-crawl" data-id="Indexation-par-le-crawl"><a class="anchor hidden-xs" href="#Indexation-par-le-crawl" title="Indexation-par-le-crawl"><span class="octicon octicon-link"></span></a><span>Indexation par le crawl</span></h2><ol>
+<li><span>Recuperation de la page par le bot (</span><em><span>résolution DNS</span></em><span>):</span></li>
+</ol><ul>
+<li><span>Copie du DNS si on peut (</span><em><span>on crawl beaucoup plus vite que si on doit aller le chercher à l’extérieur -&gt; ~50 fois plus vite</span></em><span>)</span></li>
+<li><span>Sinon on cherche la page sur le web</span></li>
+</ul><ol start="2">
+<li><span>Analyse syntaxique du contenu de la page</span></li>
+<li><span>Contenu déjà vu ?</span></li>
+<li><span>Filtre à URIs</span></li>
+<li><span>Elimination des URIs en duplication</span></li>
+<li><span>Frontières des URIs déjà vues</span></li>
+</ol><h2 id="Misc" data-id="Misc"><a class="anchor hidden-xs" href="#Misc" title="Misc"><span class="octicon octicon-link"></span></a><span>Misc</span></h2><ul>
+<li><span>Nutch</span></li>
+<li><span>Bubing</span></li>
+<li><a href="https://github.com/QwantResearch/mermoz" target="_blank" rel="noopener"><span>https://github.com/QwantResearch/mermoz</span></a></li>
+<li><span>Corrélation != Causalité</span></li>
+<li><span>Kyle Rush a completement refait l’infrastructure du site de Barack Obama</span></li>
+<li><span>RUM: Real User Monitoring</span></li>
+<li><span>Cloudflare</span></li>
+<li><span>Akamai</span></li>
+</ul><h2 id="Impact-sur-le-SEO" data-id="Impact-sur-le-SEO"><a class="anchor hidden-xs" href="#Impact-sur-le-SEO" title="Impact-sur-le-SEO"><span class="octicon octicon-link"></span></a><span>Impact sur le SEO</span></h2><h3 id="Faciliter-la-vie-du-crawler" data-id="Faciliter-la-vie-du-crawler"><a class="anchor hidden-xs" href="#Faciliter-la-vie-du-crawler" title="Faciliter-la-vie-du-crawler"><span class="octicon octicon-link"></span></a><span>Faciliter la vie du crawler</span></h3><p><span>Un bon crawler doit etre:</span></p><ul>
+<li><span>rapide -&gt; moins cher en cout serveur</span></li>
+<li><span>qualitatif</span></li>
+</ul><h3 id="Rapidité" data-id="Rapidité"><a class="anchor hidden-xs" href="#Rapidité" title="Rapidité"><span class="octicon octicon-link"></span></a><span>Rapidité</span></h3><ul>
+<li><span>si un site se charge 2x plus vite, on coute moins cher à Google</span></li>
+<li><span>mieux pour l’utilisateur</span></li>
+<li><span>améliore son référencement</span></li>
+</ul><p><span>En 2017, Neil Patel et Ahref ont fait des mesures sur ~144 000 sites pour essayer de comprendre le référencement:</span></p><ul>
+<li><strong><span>TTFB</span></strong><span>: Time To First Byte -&gt; 0.85 sec</span>
+<ul>
+<li><span>quand je commence à demander une ressource web à un serveur distant, c’est au bout de cb de temps je recois son premier acknowledgment</span></li>
+</ul>
+</li>
+<li><strong><span>Start render</span></strong><span> -&gt; 2.23 sec</span>
+<ul>
+<li><span>le moment à partir duquel qqchose apparait sur la page web</span></li>
+</ul>
+</li>
+<li><strong><span>Visually complete</span></strong><span> -&gt; 10.44 sec</span>
+<ul>
+<li><span>au bout de cb de temps, tout ce qui doit etre affiché est affiché sur la page (</span><em><span>tout ce qui est chargé après, c’est du script qui n’implique de modifs visuelles</span></em><span>)</span></li>
+</ul>
+</li>
+<li><strong><span>Doc complete</span></strong><span> -&gt; 2.12 sec</span>
+<ul>
+<li><span>tout le javascript a fini de chargé</span></li>
+</ul>
+</li>
+<li><strong><span>Fully loaded</span></strong><span> -&gt; 4.13 sec</span>
+<ul>
+<li><span>j’ai attendu qques secondes pour m’assurer qu’il n’y a pas de script qui pop/se réactive d’un coup</span></li>
+</ul>
+</li>
+</ul><h4 id="Améliorer-la-vitesse-de-chargement" data-id="Améliorer-la-vitesse-de-chargement"><a class="anchor hidden-xs" href="#Améliorer-la-vitesse-de-chargement" title="Améliorer-la-vitesse-de-chargement"><span class="octicon octicon-link"></span></a><span>Améliorer la vitesse de chargement</span></h4><ul>
+<li><span>pour la conversion avant tout (viser 1.5 sec)</span></li>
+<li><span>pour le start render (viser 1 sec)</span></li>
+<li><span>TTFB -&gt; viser 250ms (Google conseille de faire &lt; 300ms)</span></li>
+</ul><h4 id="Analyser-la-vitesse-de-chargement" data-id="Analyser-la-vitesse-de-chargement"><a class="anchor hidden-xs" href="#Analyser-la-vitesse-de-chargement" title="Analyser-la-vitesse-de-chargement"><span class="octicon octicon-link"></span></a><span>Analyser la vitesse de chargement</span></h4><ul>
+<li><span>WebPageTest</span></li>
+<li><span>Google PageSpeed Insight</span></li>
+<li><a href="http://Sitespeed.io" target="_blank" rel="noopener"><span>Sitespeed.io</span></a></li>
+</ul><h4 id="Optimiser-le-temps-de-parcours" data-id="Optimiser-le-temps-de-parcours"><a class="anchor hidden-xs" href="#Optimiser-le-temps-de-parcours" title="Optimiser-le-temps-de-parcours"><span class="octicon octicon-link"></span></a><span>Optimiser le temps de parcours</span></h4><ul>
+<li><span>approcher le serveur du client</span></li>
+<li><span>utiliser un CDN (Content Delivery Network avec Cloudflare)</span>
+<ul>
+<li><span>copie du site web sur les serveurs partout dans le monde</span></li>
+<li><span>permet de servir les sites web à partir du serveur le plus proche de l’utilisateur</span></li>
+</ul>
+</li>
+</ul><h4 id="Optimiser-le-front-end" data-id="Optimiser-le-front-end"><a class="anchor hidden-xs" href="#Optimiser-le-front-end" title="Optimiser-le-front-end"><span class="octicon octicon-link"></span></a><span>Optimiser le front end</span></h4><ul>
+<li><span>suivre les recommandations de Google PageSpeed Insight</span></li>
+<li><span>poids et taille des images</span></li>
+<li><span>nombre d’appels et résolution DNS</span></li>
+<li><span>vérif quand et où sont appelés le JS et CSS</span></li>
+</ul><h4 id="Optimiser-le-back-end" data-id="Optimiser-le-back-end"><a class="anchor hidden-xs" href="#Optimiser-le-back-end" title="Optimiser-le-back-end"><span class="octicon octicon-link"></span></a><span>Optimiser le back end</span></h4><ul>
+<li><span>Un cache, c’est une bonne pratique:</span>
+<ul>
+<li><span>Dans le navigateur</span></li>
+<li><span>Au niveau de la base de données</span></li>
+<li><span>Cache d’OPcode</span>
+<ul>
+<li><span>préinterprète une partie du code</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Compresser les pages</span></li>
+<li><span>Optimiser la base de données et les requêtes</span></li>
+<li><span>Utiliser un serveur web plus léger</span></li>
+</ul><blockquote style="border-left-color: brown;">
+<p><span class="color" data-color="brown"></span><span> Cours du 16 avril 2020</span></p>
+</blockquote><h4 id="Analyser-les-logs" data-id="Analyser-les-logs"><a class="anchor hidden-xs" href="#Analyser-les-logs" title="Analyser-les-logs"><span class="octicon octicon-link"></span></a><span>Analyser les logs</span></h4><ul>
+<li><span>Lister les autres codes http</span></li>
+<li><span>Sur les logs, demander le nombre de fois ou la demande est faite a “robots.txt”</span></li>
+<li><span>Vis a vis de la RGPD, on doit tout anonymiser. Comme les bots ne sont pas des personnes physiques, on peut montrer les logs de bots.</span></li>
+</ul><h4 id="Suivre-GoogleBot-en-temps-reel" data-id="Suivre-GoogleBot-en-temps-reel"><a class="anchor hidden-xs" href="#Suivre-GoogleBot-en-temps-reel" title="Suivre-GoogleBot-en-temps-reel"><span class="octicon octicon-link"></span></a><span>Suivre GoogleBot en temps reel</span></h4><ul>
+<li><span>cela permet de reagir rapidement en cas d’anomalie</span></li>
+<li><span>c’est toujours amusant de voir en temps reel le GoogleBot s’agiter</span></li>
+<li><span>on va utiliser le Measurement Protocol de Google pour suivre GGBot dans Google Analytics</span></li>
+</ul><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %0 Pages: 1 -->
+<svg width="344pt" height="260pt" viewBox="0.00 0.00 344.12 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 340.1234,-256 340.1234,4 -4,4"></polygon>
+<!-- pw -->
+<g id="node1" class="node">
+<title>pw</title>
+<ellipse fill="none" stroke="#000000" cx="98.7274" cy="-234" rx="48.1157" ry="18"></ellipse>
+<text text-anchor="middle" x="98.7274" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Page web</text>
+</g>
+<!-- bp -->
+<g id="node2" class="node">
+<title>bp</title>
+<ellipse fill="none" stroke="#000000" cx="98.7274" cy="-162" rx="57.3821" ry="18"></ellipse>
+<text text-anchor="middle" x="98.7274" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Brique PHP</text>
+</g>
+<!-- pw&#45;&gt;bp -->
+<g id="edge1" class="edge">
+<title>pw-&gt;bp</title>
+<path fill="none" stroke="#000000" d="M98.7274,-215.8314C98.7274,-208.131 98.7274,-198.9743 98.7274,-190.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="102.2275,-190.4132 98.7274,-180.4133 95.2275,-190.4133 102.2275,-190.4132"></polygon>
+</g>
+<!-- mp -->
+<g id="node3" class="node">
+<title>mp</title>
+<ellipse fill="none" stroke="#000000" cx="98.7274" cy="-90" rx="98.9552" ry="18"></ellipse>
+<text text-anchor="middle" x="98.7274" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Measurement Protocol</text>
+</g>
+<!-- bp&#45;&gt;mp -->
+<g id="edge2" class="edge">
+<title>bp-&gt;mp</title>
+<path fill="none" stroke="#000000" d="M98.7274,-143.8314C98.7274,-136.131 98.7274,-126.9743 98.7274,-118.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="102.2275,-118.4132 98.7274,-108.4133 95.2275,-118.4133 102.2275,-118.4132"></polygon>
+</g>
+<!-- ga -->
+<g id="node4" class="node">
+<title>ga</title>
+<ellipse fill="none" stroke="#000000" cx="186.7274" cy="-18" rx="78.7726" ry="18"></ellipse>
+<text text-anchor="middle" x="186.7274" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Google Analytics</text>
+</g>
+<!-- mp&#45;&gt;ga -->
+<g id="edge3" class="edge">
+<title>mp-&gt;ga</title>
+<path fill="none" stroke="#000000" d="M120.4802,-72.2022C131.6457,-63.0668 145.4051,-51.8092 157.4856,-41.925"></path>
+<polygon fill="#000000" stroke="#000000" points="160.0052,-44.3859 165.5284,-35.3446 155.5725,-38.9681 160.0052,-44.3859"></polygon>
+</g>
+<!-- c -->
+<g id="node5" class="node">
+<title>c</title>
+<ellipse fill="none" stroke="#000000" cx="275.7274" cy="-90" rx="60.2923" ry="18"></ellipse>
+<text text-anchor="middle" x="275.7274" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Consultation</text>
+</g>
+<!-- c&#45;&gt;ga -->
+<g id="edge4" class="edge">
+<title>c-&gt;ga</title>
+<path fill="none" stroke="#000000" d="M254.6356,-72.937C243.1662,-63.6584 228.7966,-52.0336 216.2328,-41.8696"></path>
+<polygon fill="#000000" stroke="#000000" points="218.2618,-39.0091 208.286,-35.4407 213.8591,-44.4513 218.2618,-39.0091"></polygon>
+</g>
+</g>
+</svg>
+</pre><h3 id="Qualité" data-id="Qualité"><a class="anchor hidden-xs" href="#Qualité" title="Qualité"><span class="octicon octicon-link"></span></a><span>Qualité</span></h3><h4 id="Pas-d’interet-a-crawler-des-pages-inutiles" data-id="Pas-d’interet-a-crawler-des-pages-inutiles"><a class="anchor hidden-xs" href="#Pas-d’interet-a-crawler-des-pages-inutiles" title="Pas-d’interet-a-crawler-des-pages-inutiles"><span class="octicon octicon-link"></span></a><span>Pas d’interet a crawler des pages inutiles</span></h4><ul>
+<li><span>on consomme son quota ce crawl sans en retirer aucun benefice</span></li>
+<li><span>on ne selectionne pas la page “retenue”</span></li>
+<li><strong><span>"Content is king"</span></strong></li>
+</ul><h4 id="Qualité-minimale-au-moment-du-crawl" data-id="Qualité-minimale-au-moment-du-crawl"><a class="anchor hidden-xs" href="#Qualité-minimale-au-moment-du-crawl" title="Qualité-minimale-au-moment-du-crawl"><span class="octicon octicon-link"></span></a><span>Qualité minimale au moment du crawl</span></h4><p><span>La qualité minimale au moment du crawl est caractérisée par la quantité de contenu qui permet d’indexer la page.</span></p><h4 id="Eviter-l’indexation" data-id="Eviter-l’indexation"><a class="anchor hidden-xs" href="#Eviter-l’indexation" title="Eviter-l’indexation"><span class="octicon octicon-link"></span></a><span>Eviter l’indexation</span></h4><table>
+<thead>
+<tr>
+<th><span>Type</span></th>
+<th><span>Directive</span></th>
+<th><span>crawl</span></th>
+<th><span>indexation</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>robots.txt</span></td>
+<td><span>disallow</span></td>
+<td><span>non</span></td>
+<td><span>parfois</span></td>
+</tr>
+<tr>
+<td><span>robots.txt</span></td>
+<td><span>noindex</span></td>
+<td><span>non</span></td>
+<td><span>non</span></td>
+</tr>
+<tr>
+<td><span>meta robots (</span><em><span>x-robots-tag</span></em><span>)</span></td>
+<td><span>noindex, follow</span></td>
+<td><span>oui</span></td>
+<td><span>non</span></td>
+</tr>
+<tr>
+<td><span>meta rel (</span><em><span>ou en header</span></em><span>)</span></td>
+<td><span>canonical</span></td>
+<td><span>oui</span></td>
+<td><span>page cible (</span><em><span>souvent</span></em><span>)</span></td>
+</tr>
+</tbody>
+</table><h2 id="Duplicate-content" data-id="Duplicate-content"><a class="anchor hidden-xs" href="#Duplicate-content" title="Duplicate-content"><span class="octicon octicon-link"></span></a><span>Duplicate content</span></h2><p><strong><span>DUST:</span></strong><span> </span><strong><span>D</span></strong><span>uplicate </span><strong><span>U</span></strong><span>rl, </span><strong><span>S</span></strong><span>ame </span><strong><span>T</span></strong><span>ext</span></p><h3 id="Near-Duplicate-et-Full-Duplicate" data-id="Near-Duplicate-et-Full-Duplicate"><a class="anchor hidden-xs" href="#Near-Duplicate-et-Full-Duplicate" title="Near-Duplicate-et-Full-Duplicate"><span class="octicon octicon-link"></span></a><span>Near Duplicate et Full Duplicate</span></h3><p><span>Le Full Duplicate n’existe pas (ou presque).</span></p><ul>
+<li><span>un “.” n’est plus du Full Duplicate</span></li>
+<li><span>Sauf pour 2 URLs qui pointent sur la meme page</span></li>
+</ul><p><span>30% du web sont en Near Duplicate</span></p><h3 id="Detecter-le-Near-Duplicate" data-id="Detecter-le-Near-Duplicate"><a class="anchor hidden-xs" href="#Detecter-le-Near-Duplicate" title="Detecter-le-Near-Duplicate"><span class="octicon octicon-link"></span></a><span>Detecter le Near Duplicate</span></h3><h4 id="1" data-id="1"><a class="anchor hidden-xs" href="#1" title="1"><span class="octicon octicon-link"></span></a><span>1*</span></h4><ul>
+<li><span>La distance utilisee est de type “distance d’edition”.</span>
+<ul>
+<li><span>On compte le nombre de modifications qui transforment un document en un autre.</span></li>
+</ul>
+</li>
+<li><span>Distance d’edition standard: Levenstein (1965)</span>
+<ul>
+<li><span>Trop complexe pour les documents</span></li>
+<li><span>Utilisee entre deux mots</span></li>
+<li><span>A la place: Shingles et Jaccard (</span><em><span>fonctionne par approximation</span></em><span>)</span></li>
+</ul>
+</li>
+</ul><p><span>Fonction de hachage: simhash par Moses Charikar (fast murmur transform)</span></p><h4 id="L’idée" data-id="L’idée"><a class="anchor hidden-xs" href="#L’idée" title="L’idée"><span class="octicon octicon-link"></span></a><span>L’idée</span></h4><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %0 Pages: 1 -->
+<svg width="624pt" height="260pt" viewBox="0.00 0.00 624.01 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 620.0149,-256 620.0149,4 -4,4"></polygon>
+<!-- da -->
+<g id="node1" class="node">
+<title>da</title>
+<ellipse fill="none" stroke="#000000" cx="150.0386" cy="-234" rx="36.5173" ry="18"></ellipse>
+<text text-anchor="middle" x="150.0386" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Doc A</text>
+</g>
+<!-- sa -->
+<g id="node3" class="node">
+<title>sa</title>
+<ellipse fill="none" stroke="#000000" cx="150.0386" cy="-162" rx="150.0771" ry="18"></ellipse>
+<text text-anchor="middle" x="150.0386" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Ensemble des Shingles de A = S(A)</text>
+</g>
+<!-- da&#45;&gt;sa -->
+<g id="edge1" class="edge">
+<title>da-&gt;sa</title>
+<path fill="none" stroke="#000000" d="M150.0386,-215.8314C150.0386,-208.131 150.0386,-198.9743 150.0386,-190.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="153.5387,-190.4132 150.0386,-180.4133 146.5387,-190.4133 153.5387,-190.4132"></polygon>
+</g>
+<!-- db -->
+<g id="node2" class="node">
+<title>db</title>
+<ellipse fill="none" stroke="#000000" cx="467.0386" cy="-234" rx="35.955" ry="18"></ellipse>
+<text text-anchor="middle" x="467.0386" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Doc B</text>
+</g>
+<!-- sb -->
+<g id="node4" class="node">
+<title>sb</title>
+<ellipse fill="none" stroke="#000000" cx="467.0386" cy="-162" rx="148.9526" ry="18"></ellipse>
+<text text-anchor="middle" x="467.0386" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Ensemble des Shingles de B = S(B)</text>
+</g>
+<!-- db&#45;&gt;sb -->
+<g id="edge2" class="edge">
+<title>db-&gt;sb</title>
+<path fill="none" stroke="#000000" d="M467.0386,-215.8314C467.0386,-208.131 467.0386,-198.9743 467.0386,-190.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="470.5387,-190.4132 467.0386,-180.4133 463.5387,-190.4133 470.5387,-190.4132"></polygon>
+</g>
+<!-- j -->
+<g id="node5" class="node">
+<title>j</title>
+<ellipse fill="none" stroke="#000000" cx="308.0386" cy="-90" rx="39.9645" ry="18"></ellipse>
+<text text-anchor="middle" x="308.0386" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Jaccard</text>
+</g>
+<!-- sa&#45;&gt;j -->
+<g id="edge4" class="edge">
+<title>sa-&gt;j</title>
+<path fill="none" stroke="#000000" d="M188.286,-144.5708C213.2288,-133.2044 245.6354,-118.4369 270.4461,-107.1307"></path>
+<polygon fill="#000000" stroke="#000000" points="271.9034,-110.313 279.5517,-102.9813 269.0007,-103.9432 271.9034,-110.313"></polygon>
+</g>
+<!-- sb&#45;&gt;j -->
+<g id="edge3" class="edge">
+<title>sb-&gt;j</title>
+<path fill="none" stroke="#000000" d="M428.5491,-144.5708C403.4484,-133.2044 370.8367,-118.4369 345.8689,-107.1307"></path>
+<polygon fill="#000000" stroke="#000000" points="347.259,-103.9181 336.7057,-102.9813 344.3714,-110.2948 347.259,-103.9181"></polygon>
+</g>
+<!-- t -->
+<g id="node6" class="node">
+<title>t</title>
+<ellipse fill="none" stroke="#000000" cx="308.0386" cy="-18" rx="95.8229" ry="18"></ellipse>
+<text text-anchor="middle" x="308.0386" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">~ Taux de duplication</text>
+</g>
+<!-- j&#45;&gt;t -->
+<g id="edge5" class="edge">
+<title>j-&gt;t</title>
+<path fill="none" stroke="#000000" d="M308.0386,-71.8314C308.0386,-64.131 308.0386,-54.9743 308.0386,-46.4166"></path>
+<polygon fill="#000000" stroke="#000000" points="311.5387,-46.4132 308.0386,-36.4133 304.5387,-46.4133 311.5387,-46.4132"></polygon>
+</g>
+</g>
+</svg>
+</pre><p><span>Si taux de duplication &gt; 0.8 alors </span><strong><span>Alerte Duplication</span></strong><span>.</span><br>
+<span>Dépend du type de site:</span></p><ul>
+<li><span>s’il s’agit d’un site de e-commerce, il vaut mieux avoir un taux de duplication élevé</span></li>
+</ul><h4 id="Shingles" data-id="Shingles"><a class="anchor hidden-xs" href="#Shingles" title="Shingles"><span class="octicon octicon-link"></span></a><span>Shingles</span></h4><ul>
+<li><span>un k-shingle est un groupe de mots contigus dans le document</span></li>
+<li><span>k-shingle = k-gram (</span><em><span>n-gram</span></em><span>) &lt;- on utilise ce terme pour le duplicate content</span></li>
+<li><span>on choisit k pour avoir le meilleur rapport détection/temps de calcul (</span><em><span>paramètre lié à l’expérience</span></em><span>)</span></li>
+</ul><h4 id="Exemple-de-3-shingles" data-id="Exemple-de-3-shingles"><a class="anchor hidden-xs" href="#Exemple-de-3-shingles" title="Exemple-de-3-shingles"><span class="octicon octicon-link"></span></a><span>Exemple de 3 shingles</span></h4><p><span>Luke, je suis ton pere!</span><br>
+<span>les shingles:</span></p><ul>
+<li><span>Luke je suis</span></li>
+<li><span>je suis ton</span></li>
+<li><span>suis ton pere</span><br>
+<span>Le document est représenté par un ensemble de 3-shingles.</span></li>
+</ul><h4 id="2" data-id="2"><a class="anchor hidden-xs" href="#2" title="2"><span class="octicon octicon-link"></span></a><span>2*</span></h4><ul>
+<li><span>quasi-duplication</span>
+<ul>
+<li><span>utilisation syntaxique identique sauf sur qques mots</span></li>
+</ul>
+</li>
+<li><span>2 documents sont en quasi-duplication si et seulement si ils ont presque les memes ensembles de Shingles</span></li>
+<li><span>Proportion de shingles en commun (</span><em><span>distance de jaccard</span></em><span>) = taux de duplication</span></li>
+</ul><h1 id="Les-signaux-utilisateurs-pour-optimiser-le-ranking" data-id="Les-signaux-utilisateurs-pour-optimiser-le-ranking"><a class="anchor hidden-xs" href="#Les-signaux-utilisateurs-pour-optimiser-le-ranking" title="Les-signaux-utilisateurs-pour-optimiser-le-ranking"><span class="octicon octicon-link"></span></a><span>Les signaux utilisateurs pour optimiser le ranking</span></h1><h2 id="Learning-to-rank1" data-id="Learning-to-rank"><a class="anchor hidden-xs" href="#Learning-to-rank1" title="Learning-to-rank1"><span class="octicon octicon-link"></span></a><span>Learning to rank</span></h2><p><span>Calcul la pondération des signaux</span><br>
+<span>En 2008, Amit Singhal -&gt; 200 signaux</span></p><ul>
+<li><span>Ranknet</span></li>
+<li><span>Lambdamart</span></li>
+</ul><p><strong><span>De nombreux signaux:</span></strong></p><ul>
+<li><span>algos structurelles:</span>
+<ul>
+<li><span>popularites</span></li>
+<li><span>trust</span></li>
+<li><span>pagerank thematique</span></li>
+<li><span>spam mass (popularite negative)</span></li>
+</ul>
+</li>
+<li><span>liens de wiki, edu, gouv</span></li>
+<li><span>…</span></li>
+</ul><p><span>Voir pdf page 80</span><br>
+<span>cosinus Y: pertinence de la page par rapport à la requete</span></p><h3 id="Pertinence-implicite" data-id="Pertinence-implicite"><a class="anchor hidden-xs" href="#Pertinence-implicite" title="Pertinence-implicite"><span class="octicon octicon-link"></span></a><span>Pertinence implicite</span></h3><p><span>Mesure de qualité:</span></p><ul>
+<li><span>taux de click</span></li>
+<li><span>clic skip</span></li>
+</ul><h4 id="Pour-le-SEO" data-id="Pour-le-SEO"><a class="anchor hidden-xs" href="#Pour-le-SEO" title="Pour-le-SEO"><span class="octicon octicon-link"></span></a><span>Pour le SEO</span></h4><p><span>Le SEO a deux leviers pour augmenter la qualité perçue par le moteur:</span></p><ul>
+<li><span>augmenter l’attractivité des pages en créant des snippets attractifs</span></li>
+<li><span>améliorer le ratio rétention - bounce</span></li>
+</ul><h1 id="Les-pageranks-et-les-surfeurs-aléatoires" data-id="Les-pageranks-et-les-surfeurs-aléatoires"><a class="anchor hidden-xs" href="#Les-pageranks-et-les-surfeurs-aléatoires" title="Les-pageranks-et-les-surfeurs-aléatoires"><span class="octicon octicon-link"></span></a><span>Les </span><strong><span>pageranks</span></strong><span> et les surfeurs </span><strong><span>aléatoires</span></strong></h1><h2 id="Pagerank-la-vision-classique" data-id="Pagerank-la-vision-classique"><a class="anchor hidden-xs" href="#Pagerank-la-vision-classique" title="Pagerank-la-vision-classique"><span class="octicon octicon-link"></span></a><span>Pagerank, la vision classique</span></h2><ul>
+<li><span>ergodicité (?)</span></li>
+<li><span>Damping factor -&gt; la constante de téléportation</span></li>
+</ul><h3 id="Visualiser-la-PageRank" data-id="Visualiser-la-PageRank"><a class="anchor hidden-xs" href="#Visualiser-la-PageRank" title="Visualiser-la-PageRank"><span class="octicon octicon-link"></span></a><span>Visualiser la PageRank</span></h3><ul>
+<li><span>Gephi (open source), logiciel spécialisé en représentation des graphes utilisé avec Screaming Frog</span></li>
+<li><span>-&gt; spatialisation</span></li>
+</ul><p><span>Les Panama papers</span></p><p><span>modele du surfeur raisonnable, prend en compte la proba qu’un lien est cliqué par rapport à un autre</span></p><p><span>masquage thématique</span></p><p><span>C’est possible de prendre en compte la sémantique des liens.</span></p><blockquote style="border-left-color: brown;">
+<p><span class="color" data-color="brown"></span><span> Cours du 17/04/2020</span></p>
+</blockquote><h3 id="Le-pagerank-vers-un-pagerank-sémantique" data-id="Le-pagerank-vers-un-pagerank-sémantique"><a class="anchor hidden-xs" href="#Le-pagerank-vers-un-pagerank-sémantique" title="Le-pagerank-vers-un-pagerank-sémantique"><span class="octicon octicon-link"></span></a><span>Le pagerank vers un pagerank sémantique</span></h3><p><strong><span>Approches:</span></strong></p><ul>
+<li><span>Le surfeur intelligent: combinaison des valeurs des liens et des contenus pour le calcul de la popularité</span>
+<ul>
+<li><span>par Matthew Richardson et Pedro Domingos</span></li>
+</ul>
+</li>
+<li><span>Topic-sensitive pagerank</span>
+<ul>
+<li><span>Kaltix</span></li>
+<li><span>par Taher H. Haveliwala</span></li>
+</ul>
+</li>
+<li><span>Topical link analysis (T-PR)</span></li>
+</ul><h3 id="Le-surfeur-intelligent" data-id="Le-surfeur-intelligent"><a class="anchor hidden-xs" href="#Le-surfeur-intelligent" title="Le-surfeur-intelligent"><span class="octicon octicon-link"></span></a><span>Le surfeur intelligent</span></h3><ul>
+<li><span>on modifie le comportement du surfeur aleatoire pour le rendre sensible a la semantique</span></li>
+<li><span>il va tjrs sauter de pages en pages de maniere probabiliste, mais il va se baser sur le contenu des pages</span></li>
+</ul><p><span>indice de continuité sémantique</span></p><p><em><span>Misc:</span></em></p><ul>
+<li><em><span>tests de chi2</span></em></li>
+<li><em><span>chernoff hoeding</span></em></li>
+</ul><p><span>Résultats expérimentaux:</span></p><ul>
+<li><span>Educrawl</span></li>
+<li><span>WebBase (15 millions de pages choisies aléatoirement)</span></li>
+</ul><p><span>Le surfeur intelligent est trop coûteux donc difficilement implémentable.</span></p><p><span>Curlie</span><br>
+<strong><span>SERPs:</span></strong><span> Search Engine Results Page</span></p><h3 id="Cocon-semantique" data-id="Cocon-semantique"><a class="anchor hidden-xs" href="#Cocon-semantique" title="Cocon-semantique"><span class="octicon octicon-link"></span></a><span>Cocon semantique</span></h3><p><span>-&gt; entourage de pages</span></p><ul>
+<li><span>couvrir davantage le sujet</span></li>
+</ul><p><span>c’est du </span><em><span>netlinking</span></em></p><p><span>**Un document est pertinent pour une requête s’il répond au besoin informationnel sous-jacent.</span></p><p><strong><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"><span> reprendre le cours</span></strong></p><p><span>Expansion de Rochio</span></p><blockquote style="border-left-color: brown;">
+<p><span class="color" data-color="brown"></span><span> Cours du 30/04/2020</span></p>
+</blockquote><h1 id="Traitement-des-requêtes" data-id="Traitement-des-requêtes"><a class="anchor hidden-xs" href="#Traitement-des-requêtes" title="Traitement-des-requêtes"><span class="octicon octicon-link"></span></a><span>Traitement des requêtes</span></h1><p><span>La requête est le goulot d’etranglement pour ameliorer l’experience de recherche.</span></p><p><span>Problemes divers:</span></p><ul>
+<li><span>Comment exprimer ce que l’on ne connait pas ?</span></li>
+<li><span>Nombreuses ambiguites</span></li>
+<li><span>Plusieurs besoins informationnels differents pour une meme requête</span></li>
+<li><span>Interpretation du langage naturel</span></li>
+</ul><p><span>Le moteur va faire du raffinement et de l’expansion de requête.</span></p><p><strong><span>Raffinement de requete</span></strong><span>: Modifier des mots de la requete par d’autres</span><br>
+<strong><span>Expansion de requete</span></strong><span>: Ajout de mots a la requete</span></p><p><span>5 à 10% des utilisateurs qui partiraient du navigateur si on leur disait qu’on modifie leurs requetes</span></p><h2 id="Approches-les-plus-efficaces" data-id="Approches-les-plus-efficaces"><a class="anchor hidden-xs" href="#Approches-les-plus-efficaces" title="Approches-les-plus-efficaces"><span class="octicon octicon-link"></span></a><span>Approches les plus efficaces</span></h2><ul>
+<li><span>Co-occurrence: on ajoute à la requete des termes qui frequemment associés aux termes de la requete</span>
+<ul>
+<li><span>Mesure de DICE</span></li>
+</ul>
+</li>
+</ul><h3 id="Humming-bird" data-id="Humming-bird"><a class="anchor hidden-xs" href="#Humming-bird" title="Humming-bird"><span class="octicon octicon-link"></span></a><span>Humming bird</span></h3><p><span>Relevance feedback</span></p><ul>
+<li><span>Mesurer la “compatibilité” de 2 termes:</span>
+<ul>
+<li><span>mesure de DICE</span></li>
+<li><span>mesure de CHI 2</span></li>
+<li><span>mesure de EMIM</span></li>
+<li><span>mesure de MIM</span></li>
+</ul>
+</li>
+</ul><p><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"><span> </span><img class="emoji" alt=":movie_camera:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/movie_camera.png"><br>
+<strong><span>Gros probleme ~~~</span></strong><span> (27 min de video)</span></p><p><strong><span>Impact SEO:</span></strong><span> requete q -&gt; corpus sur la thematique de q -&gt; compter les documents de q -&gt; co-occurence de q -&gt; ~~~</span></p><h1 id="Vecteurs-de-contexte" data-id="Vecteurs-de-contexte"><a class="anchor hidden-xs" href="#Vecteurs-de-contexte" title="Vecteurs-de-contexte"><span class="octicon octicon-link"></span></a><span>Vecteurs de contexte</span></h1><p><span>-&gt; embarquent de la sémantique</span></p><p><img class="emoji" alt=":books:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/books.png"><span> Vulgarisation de reseaux de neurones: </span><a href="https://twitter.com/gabrielpeyre/status/1255808297460027393?s=20" target="_blank" rel="noopener"><span>https://twitter.com/gabrielpeyre/status/1255808297460027393?s=20</span></a></p><h1 id="Le-Knowledge-Graph" data-id="Le-Knowledge-Graph"><a class="anchor hidden-xs" href="#Le-Knowledge-Graph" title="Le-Knowledge-Graph"><span class="octicon octicon-link"></span></a><span>Le Knowledge Graph</span></h1><p><span>-&gt; base de connaissances mise en place en 2012</span><br>
+<span>Google l’utilise pour de la désambiguisation</span></p><h1 id="Les-fermes-de-liens" data-id="Les-fermes-de-liens"><a class="anchor hidden-xs" href="#Les-fermes-de-liens" title="Les-fermes-de-liens"><span class="octicon octicon-link"></span></a><span>Les fermes de liens</span></h1><ul>
+<li><span>page de boost</span></li>
+</ul><h1 id="Prédiction-et-penguin---2h20-" data-id="Prédiction-et-penguin---2h20-"><a class="anchor hidden-xs" href="#Prédiction-et-penguin---2h20-" title="Prédiction-et-penguin---2h20-"><span class="octicon octicon-link"></span></a><span>Prédiction et penguin - 2h20 (</span><img class="emoji" alt=":movie_camera:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/movie_camera.png"><span>)</span></h1><hr><div class="alert alert-info">
+<h1 id="Notes-de-cours-revisitées" data-id="Notes-de-cours-revisitées"><a class="anchor hidden-xs" href="#Notes-de-cours-revisitées" title="Notes-de-cours-revisitées"><span class="octicon octicon-link"></span></a><span>Notes de cours revisitées</span></h1>
+</div></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#SEO---Méthodes-d’Optimisation-pour-les-moteurs-de-recherche" title="SEO - Méthodes d’Optimisation pour les moteurs de recherche">SEO - Méthodes d’Optimisation pour les moteurs de recherche</a></li>
+<li><a href="#Introduction" title="Introduction">Introduction</a><ul class="nav">
+<li><a href="#Petit-historique" title="Petit historique">Petit historique</a></li>
+<li><a href="#Définitions" title="Définitions">Définitions</a><ul class="nav">
+<li><a href="#Des-chiffres" title="Des chiffres">Des chiffres</a></li>
+</ul>
+</li>
+<li><a href="#Schema-global-du-moteur" title="Schema global du moteur">Schema global du moteur</a><ul class="nav">
+<li><a href="#Learning-to-rank" title="Learning to rank">Learning to rank</a></li>
+</ul>
+</li>
+<li><a href="#Indexation-par-le-crawl" title="Indexation par le crawl">Indexation par le crawl</a></li>
+<li><a href="#Misc" title="Misc">Misc</a></li>
+<li><a href="#Impact-sur-le-SEO" title="Impact sur le SEO">Impact sur le SEO</a><ul class="nav">
+<li><a href="#Faciliter-la-vie-du-crawler" title="Faciliter la vie du crawler">Faciliter la vie du crawler</a></li>
+<li><a href="#Rapidité" title="Rapidité">Rapidité</a></li>
+<li><a href="#Qualité" title="Qualité">Qualité</a></li>
+</ul>
+</li>
+<li><a href="#Duplicate-content" title="Duplicate content">Duplicate content</a><ul class="nav">
+<li><a href="#Near-Duplicate-et-Full-Duplicate" title="Near Duplicate et Full Duplicate">Near Duplicate et Full Duplicate</a></li>
+<li><a href="#Detecter-le-Near-Duplicate" title="Detecter le Near Duplicate">Detecter le Near Duplicate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Les-signaux-utilisateurs-pour-optimiser-le-ranking" title="Les signaux utilisateurs pour optimiser le ranking">Les signaux utilisateurs pour optimiser le ranking</a><ul class="nav">
+<li><a href="#Learning-to-rank1" title="Learning to rank">Learning to rank</a><ul class="nav">
+<li><a href="#Pertinence-implicite" title="Pertinence implicite">Pertinence implicite</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Les-pageranks-et-les-surfeurs-aléatoires" title="Les pageranks et les surfeurs aléatoires">Les pageranks et les surfeurs aléatoires</a><ul class="nav">
+<li><a href="#Pagerank-la-vision-classique" title="Pagerank, la vision classique">Pagerank, la vision classique</a><ul class="nav">
+<li><a href="#Visualiser-la-PageRank" title="Visualiser la PageRank">Visualiser la PageRank</a></li>
+<li><a href="#Le-pagerank-vers-un-pagerank-sémantique" title="Le pagerank vers un pagerank sémantique">Le pagerank vers un pagerank sémantique</a></li>
+<li><a href="#Le-surfeur-intelligent" title="Le surfeur intelligent">Le surfeur intelligent</a></li>
+<li><a href="#Cocon-semantique" title="Cocon semantique">Cocon semantique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Traitement-des-requêtes" title="Traitement des requêtes">Traitement des requêtes</a><ul class="nav">
+<li><a href="#Approches-les-plus-efficaces" title="Approches les plus efficaces">Approches les plus efficaces</a><ul class="nav">
+<li><a href="#Humming-bird" title="Humming bird">Humming bird</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Vecteurs-de-contexte" title="Vecteurs de contexte">Vecteurs de contexte</a></li>
+<li><a href="#Le-Knowledge-Graph" title="Le Knowledge Graph">Le Knowledge Graph</a></li>
+<li><a href="#Les-fermes-de-liens" title="Les fermes de liens">Les fermes de liens</a></li>
+<li><a href="#Prédiction-et-penguin---2h20-" title="Prédiction et penguin - 2h20 ()">Prédiction et penguin - 2h20 ()</a></li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#SEO---Méthodes-d’Optimisation-pour-les-moteurs-de-recherche" title="SEO - Méthodes d’Optimisation pour les moteurs de recherche">SEO - Méthodes d’Optimisation pour les moteurs de recherche</a></li>
+<li><a href="#Introduction" title="Introduction">Introduction</a><ul class="nav">
+<li><a href="#Petit-historique" title="Petit historique">Petit historique</a></li>
+<li><a href="#Définitions" title="Définitions">Définitions</a><ul class="nav">
+<li><a href="#Des-chiffres" title="Des chiffres">Des chiffres</a></li>
+</ul>
+</li>
+<li><a href="#Schema-global-du-moteur" title="Schema global du moteur">Schema global du moteur</a><ul class="nav">
+<li><a href="#Learning-to-rank" title="Learning to rank">Learning to rank</a></li>
+</ul>
+</li>
+<li><a href="#Indexation-par-le-crawl" title="Indexation par le crawl">Indexation par le crawl</a></li>
+<li><a href="#Misc" title="Misc">Misc</a></li>
+<li><a href="#Impact-sur-le-SEO" title="Impact sur le SEO">Impact sur le SEO</a><ul class="nav">
+<li><a href="#Faciliter-la-vie-du-crawler" title="Faciliter la vie du crawler">Faciliter la vie du crawler</a></li>
+<li><a href="#Rapidité" title="Rapidité">Rapidité</a></li>
+<li><a href="#Qualité" title="Qualité">Qualité</a></li>
+</ul>
+</li>
+<li><a href="#Duplicate-content" title="Duplicate content">Duplicate content</a><ul class="nav">
+<li><a href="#Near-Duplicate-et-Full-Duplicate" title="Near Duplicate et Full Duplicate">Near Duplicate et Full Duplicate</a></li>
+<li><a href="#Detecter-le-Near-Duplicate" title="Detecter le Near Duplicate">Detecter le Near Duplicate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Les-signaux-utilisateurs-pour-optimiser-le-ranking" title="Les signaux utilisateurs pour optimiser le ranking">Les signaux utilisateurs pour optimiser le ranking</a><ul class="nav">
+<li><a href="#Learning-to-rank1" title="Learning to rank">Learning to rank</a><ul class="nav">
+<li><a href="#Pertinence-implicite" title="Pertinence implicite">Pertinence implicite</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Les-pageranks-et-les-surfeurs-aléatoires" title="Les pageranks et les surfeurs aléatoires">Les pageranks et les surfeurs aléatoires</a><ul class="nav">
+<li><a href="#Pagerank-la-vision-classique" title="Pagerank, la vision classique">Pagerank, la vision classique</a><ul class="nav">
+<li><a href="#Visualiser-la-PageRank" title="Visualiser la PageRank">Visualiser la PageRank</a></li>
+<li><a href="#Le-pagerank-vers-un-pagerank-sémantique" title="Le pagerank vers un pagerank sémantique">Le pagerank vers un pagerank sémantique</a></li>
+<li><a href="#Le-surfeur-intelligent" title="Le surfeur intelligent">Le surfeur intelligent</a></li>
+<li><a href="#Cocon-semantique" title="Cocon semantique">Cocon semantique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Traitement-des-requêtes" title="Traitement des requêtes">Traitement des requêtes</a><ul class="nav">
+<li><a href="#Approches-les-plus-efficaces" title="Approches les plus efficaces">Approches les plus efficaces</a><ul class="nav">
+<li><a href="#Humming-bird" title="Humming bird">Humming bird</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Vecteurs-de-contexte" title="Vecteurs de contexte">Vecteurs de contexte</a></li>
+<li><a href="#Le-Knowledge-Graph" title="Le Knowledge Graph">Le Knowledge Graph</a></li>
+<li><a href="#Les-fermes-de-liens" title="Les fermes de liens">Les fermes de liens</a></li>
+<li><a href="#Prédiction-et-penguin---2h20-" title="Prédiction et penguin - 2h20 ()">Prédiction et penguin - 2h20 ()</a></li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

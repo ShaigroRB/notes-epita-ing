@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        SOCRA Ing2 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><p><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"><span> missing stuff (</span><em><span>to add when slides there</span></em><span>)</span><br>
+<img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> sure to be on the exam</span><br>
+<img class="emoji" alt=":books:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/books.png"><span> Bouquin conseillé</span></p><h1 id="SOCRA-ING" data-id="SOCRA-ING"><a class="anchor hidden-xs" href="#SOCRA-ING" title="SOCRA-ING"><span class="octicon octicon-link"></span></a><span>SOCRA (ING)</span></h1><blockquote style="border-left-color: blue;">
+<p><span class="color" data-color="blue"></span><span> 04/05/2020</span></p>
+</blockquote><h2 id="Craftmanship" data-id="Craftmanship"><a class="anchor hidden-xs" href="#Craftmanship" title="Craftmanship"><span class="octicon octicon-link"></span></a><span>Craftmanship</span></h2><p><span>Four </span><strong><span>challenges</span></strong><span>:</span></p><ul>
+<li><strong><span>Mismatch</span></strong><span> between </span><strong><span>requirements</span></strong><span> and </span><strong><span>deliveries</span></strong>
+<ul>
+<li><span>BDD, TDD, DDD</span></li>
+</ul>
+</li>
+<li><strong><span>Technical debts</span></strong><span> keeps increasing</span>
+<ul>
+<li><span>Code smell, clean code, clean architecture, principles, rules, design patterns, boys scout rule, best practices</span></li>
+</ul>
+</li>
+<li><span>High volume of </span><strong><span>bugs</span></strong>
+<ul>
+<li><span>DevOps</span></li>
+<li><span>CI-CD</span></li>
+<li><span>Testing</span></li>
+<li><span>Testing strategy</span></li>
+<li><span>testing pyramid</span></li>
+<li><span>test types</span></li>
+</ul>
+</li>
+<li><strong><span>Habits</span></strong>
+<ul>
+<li><span>Learning</span></li>
+<li><span>keep practicing the above</span></li>
+<li><span>share --&gt; community</span></li>
+</ul>
+</li>
+</ul><p><em><span>“Progresser soi-même, c’est faire progresser les autres.”</span></em></p><p><span>Le craftmanship, c’est:</span></p><ul>
+<li><span>une culture</span></li>
+<li><span>un mindset</span></li>
+</ul><p><span>-&gt; Passion + partage</span></p><h3 id="Craftmanship--What-is-it" data-id="Craftmanship--What-is-it"><a class="anchor hidden-xs" href="#Craftmanship--What-is-it" title="Craftmanship--What-is-it"><span class="octicon octicon-link"></span></a><span>Craftmanship | What is it?</span></h3><p><span>Manifesto:</span></p><ul>
+<li><span>not only working software, </span><strong><span>but also well crafted</span></strong></li>
+<li><span>not only responding to changes, </span><strong><span>but also steadily adding values</span></strong></li>
+<li><span>not only individuals and interactions, </span><strong><span>but also a community of professionals</span></strong></li>
+<li><span>not only customer collaboration, </span><strong><span>but also production partnership</span></strong></li>
+</ul><p><em><span>Quand on est propriétaire de son code, on a tendance à prendre plus soin de lui. (askip)</span></em></p><h3 id="Craftmanship--Approach" data-id="Craftmanship--Approach"><a class="anchor hidden-xs" href="#Craftmanship--Approach" title="Craftmanship--Approach"><span class="octicon octicon-link"></span></a><span>Craftmanship | Approach</span></h3><p><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"><br>
+<span>SOCRA is a </span><strong><span>software development approach</span></strong><span> that emphasies…</span></p><h3 id="Craftmanship--History" data-id="Craftmanship--History"><a class="anchor hidden-xs" href="#Craftmanship--History" title="Craftmanship--History"><span class="octicon octicon-link"></span></a><span>Craftmanship | History</span></h3><p><em><span>Who cares?</span></em></p><h3 id="Craftmanship--Values" data-id="Craftmanship--Values"><a class="anchor hidden-xs" href="#Craftmanship--Values" title="Craftmanship--Values"><span class="octicon octicon-link"></span></a><span>Craftmanship | Values</span></h3><ul>
+<li><strong><span>Business values</span></strong></li>
+<li><strong><span>Technical values: code &amp; architecture</span></strong></li>
+</ul><h2 id="Agile" data-id="Agile"><a class="anchor hidden-xs" href="#Agile" title="Agile"><span class="octicon octicon-link"></span></a><span>Agile</span></h2><h3 id="Agile--Values" data-id="Agile--Values"><a class="anchor hidden-xs" href="#Agile--Values" title="Agile--Values"><span class="octicon octicon-link"></span></a><span>Agile | Values</span></h3><p><span>The 4 values of </span><strong><span>Agile</span></strong><span>:</span></p><ul>
+<li><span>individuals and interactions </span><em><span>over processes and tools</span></em></li>
+<li><span>working software</span></li>
+<li><span>customer collaboration</span></li>
+<li><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></li>
+</ul><h3 id="Agile--Methodo" data-id="Agile--Methodo"><a class="anchor hidden-xs" href="#Agile--Methodo" title="Agile--Methodo"><span class="octicon octicon-link"></span></a><span>Agile | Methodo</span></h3><p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> 3 premiers a connaitre</span></p><ul>
+<li><span>SCRUM</span></li>
+<li><span>Kanban</span></li>
+<li><span>XP (extreme programming)</span></li>
+<li><span>FDD</span></li>
+<li><span>LSD</span></li>
+<li><span>AUP</span></li>
+<li><span>DSDM</span></li>
+<li><span>ASD</span></li>
+</ul><h3 id="Agile--Scrum" data-id="Agile--Scrum"><a class="anchor hidden-xs" href="#Agile--Scrum" title="Agile--Scrum"><span class="octicon octicon-link"></span></a><span>Agile | Scrum</span></h3><p><span>3 artefacts</span></p><ul>
+<li><span>Product backlog -&gt; construire le produit</span></li>
+<li><span>sprint backlog -&gt; une iteration</span></li>
+<li><span>product increment</span></li>
+</ul><p><span>3 roles</span></p><ul>
+<li><span>product owner -&gt; gere le backlog</span></li>
+<li><span>scrum master -&gt; facilitateur (aide l’equipe a avancer)</span></li>
+<li><span>dev team</span></li>
+</ul><p><span>4 rituals</span></p><ul>
+<li><span>sprint planning</span></li>
+<li><span>daily</span></li>
+<li><span>spring review</span></li>
+<li><span>retrospective</span></li>
+</ul><h3 id="Agile--Kanban" data-id="Agile--Kanban"><a class="anchor hidden-xs" href="#Agile--Kanban" title="Agile--Kanban"><span class="octicon octicon-link"></span></a><span>Agile | Kanban</span></h3><p><span>Kanban is about </span><strong><span>workflow</span></strong><span> management designed to visualize the work and maximize efficiency.</span></p><p><span>6 practices</span></p><ul>
+<li><span>visualize the workflow</span></li>
+<li><span>limit work in progress</span></li>
+<li><span>manage flow</span></li>
+<li><span>make process policies explicit</span></li>
+<li><span>feedback loop</span></li>
+<li><span>improve collaboratively</span></li>
+</ul><p><span>Benefits</span></p><ul>
+<li><span>flexibility</span></li>
+<li><span>reveals bottleneck</span></li>
+<li><span>team gets more responsive</span></li>
+<li><span>focus on finishing work</span></li>
+</ul><h3 id="Agile--Extreme-programming" data-id="Agile--Extreme-programming"><a class="anchor hidden-xs" href="#Agile--Extreme-programming" title="Agile--Extreme-programming"><span class="octicon octicon-link"></span></a><span>Agile | Extreme programming</span></h3><ul>
+<li><span>Dynamically changing software requirements</span></li>
+<li><span>risks caused by fixed time projects using new technology</span></li>
+<li><span>small, co-located extended development team</span></li>
+<li><span>the technology you are using allows for automated unit and functional tests</span></li>
+</ul><p><span>5 values</span></p><ul>
+<li><span>communication</span></li>
+<li><span>simplicity</span></li>
+<li><span>feedback</span></li>
+<li><span>courage</span></li>
+<li><span>respect</span></li>
+</ul><p><span>3 roles</span></p><ul>
+<li><span>customer</span></li>
+<li><span>developer</span></li>
+<li><span>tracker</span></li>
+</ul><p><em><span>Complet signifie terminé, avec tests, métriques suffisantes.</span></em></p><h3 id="Agile--Agile-Devops" data-id="Agile--Agile-Devops"><a class="anchor hidden-xs" href="#Agile--Agile-Devops" title="Agile--Agile-Devops"><span class="octicon octicon-link"></span></a><span>Agile | Agile Devops</span></h3><p><span>3 things to notice</span></p><ul>
+<li><strong><span>Agile</span></strong><span> without </span><strong><span>devops</span></strong><span> is like having </span><strong><span>only meetings</span></strong></li>
+<li><strong><span>Agile</span></strong><span> and </span><strong><span>devops</span></strong><span> together will enable </span><strong><span>faster and efficient</span></strong><span> delivery, but whatever is built will be delivered </span><strong><span>as-is</span></strong><span> (aka </span><strong><span>garbage-in garbage-out</span></strong><span>)</span></li>
+<li><strong><span>Craftmanship</span></strong><span> - the importance of </span><strong><span>technical excellence</span></strong><span> - leverages the quality of the product being built and ensures the expected value is being delivered --&gt; </span><strong><span>Build the right thing and build it right!</span></strong></li>
+</ul><h2 id="DevOps" data-id="DevOps"><a class="anchor hidden-xs" href="#DevOps" title="DevOps"><span class="octicon octicon-link"></span></a><span>DevOps</span></h2><h3 id="DevOps--CALMS" data-id="DevOps--CALMS"><a class="anchor hidden-xs" href="#DevOps--CALMS" title="DevOps--CALMS"><span class="octicon octicon-link"></span></a><span>DevOps | CALMS</span></h3><ul>
+<li><strong><span>C</span></strong><span>ulture</span></li>
+<li><strong><span>A</span></strong><span>utomation</span></li>
+<li><strong><span>L</span></strong><span>ean</span></li>
+<li><strong><span>M</span></strong><span>easurement</span></li>
+<li><strong><span>S</span></strong><span>hare</span></li>
+</ul><h3 id="DevOps--Skillset" data-id="DevOps--Skillset"><a class="anchor hidden-xs" href="#DevOps--Skillset" title="DevOps--Skillset"><span class="octicon octicon-link"></span></a><span>DevOps | Skillset</span></h3><p><span>Skills a “DevOps” engineer must possess:</span></p><ul>
+<li><span>CI-CD</span></li>
+<li><span>SCM (git, svn) &amp; Branching strategy</span></li>
+<li><span>Automation tools</span></li>
+<li><span>Containers - Orchestration - Cloud</span></li>
+<li><span>Rapid Deployment</span></li>
+<li><span>Effective Monitoring</span></li>
+<li><span>Security</span></li>
+<li><span>Testing</span></li>
+<li><span>Software Factory as code</span></li>
+<li><span>Infra as code</span></li>
+</ul><p><span>Be </span><em><span>CALMS</span></em></p><h3 id="DevOps--CI-amp-CD" data-id="DevOps--CI-amp-CD"><a class="anchor hidden-xs" href="#DevOps--CI-amp-CD" title="DevOps--CI-amp-CD"><span class="octicon octicon-link"></span></a><span>DevOps | CI &amp; CD</span></h3><p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><br>
+<img src="https://i.imgur.com/XTSjFoL.png" alt=""></p><h3 id="DevOps--Branching-strategy" data-id="DevOps--Branching-strategy"><a class="anchor hidden-xs" href="#DevOps--Branching-strategy" title="DevOps--Branching-strategy"><span class="octicon octicon-link"></span></a><span>DevOps | Branching strategy</span></h3><p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><br>
+<img src="https://i.imgur.com/2VCCI61.png" alt=""></p><p><span>Trunk-based development branches</span></p><ul>
+<li><span>feature (short-live)</span></li>
+<li><span>master (permanent)</span></li>
+</ul><p><span>Gitflow branches:</span></p><ul>
+<li><span>feature (short-live)</span></li>
+<li><span>develop (permanent)</span></li>
+<li><span>release (short-live)</span></li>
+<li><span>hot-fixe (short-live)</span></li>
+<li><span>master (permanent)</span></li>
+</ul><h2 id="Code-Quality" data-id="Code-Quality"><a class="anchor hidden-xs" href="#Code-Quality" title="Code-Quality"><span class="octicon octicon-link"></span></a><span>Code Quality</span></h2><h3 id="Code-Quality--How" data-id="Code-Quality--How"><a class="anchor hidden-xs" href="#Code-Quality--How" title="Code-Quality--How"><span class="octicon octicon-link"></span></a><span>Code Quality | How</span></h3><p><em><span>What’s up with those names?</span></em></p><ul>
+<li><span>SOLID principles</span></li>
+<li><span>DRY</span></li>
+<li><span>YAGNI</span></li>
+<li><span>KISS</span></li>
+<li><span>STUPID</span></li>
+<li><span>ACID</span></li>
+<li><span>FIRST</span></li>
+<li><span>OOP</span></li>
+<li><span>SoC (separation of concern)</span></li>
+<li><span>Code smells &amp; technical debt</span></li>
+<li><span>Clean code</span></li>
+<li><span>Refactoring</span></li>
+<li><span>Boy scout rule</span></li>
+</ul><p><em><span>Google is your friend, I’m too lazy to write them for now </span><img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></em></p><h3 id="Code-Quality--SOLID-Principles" data-id="Code-Quality--SOLID-Principles"><a class="anchor hidden-xs" href="#Code-Quality--SOLID-Principles" title="Code-Quality--SOLID-Principles"><span class="octicon octicon-link"></span></a><span>Code Quality | SOLID Principles</span></h3><p><span>Build structures easy to understand and tolerating changes:</span></p><ul>
+<li><span>Single Responsibility</span>
+<ul>
+<li><span>Things that change for the same reasons should be grouped together. Things that change for different reasons should be separated.</span></li>
+</ul>
+</li>
+<li><span>Open-closed</span>
+<ul>
+<li><span>Open pour apporter des fonctionnalités</span></li>
+</ul>
+</li>
+<li><span>Liskov substitution</span></li>
+<li><span>Interface segregation</span></li>
+<li><span>Dependency Inversion</span></li>
+</ul><h3 id="Code-Quality--Technical-debt" data-id="Code-Quality--Technical-debt"><a class="anchor hidden-xs" href="#Code-Quality--Technical-debt" title="Code-Quality--Technical-debt"><span class="octicon octicon-link"></span></a><span>Code Quality | Technical debt</span></h3><p><em><span>How to get rid of technical debt?</span></em></p><ul>
+<li><strong><span>Team</span></strong><span> practices</span></li>
+<li><strong><span>Code</span></strong><span> practices</span></li>
+<li><strong><span>Test</span></strong><span> practices</span></li>
+</ul><h3 id="Code-Quality--Clean-Code" data-id="Code-Quality--Clean-Code"><a class="anchor hidden-xs" href="#Code-Quality--Clean-Code" title="Code-Quality--Clean-Code"><span class="octicon octicon-link"></span></a><span>Code Quality | Clean Code</span></h3><p><img class="emoji" alt=":books:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/books.png"><span> Clean Code</span></p><h3 id="Code-Quality--Code-Smell" data-id="Code-Quality--Code-Smell"><a class="anchor hidden-xs" href="#Code-Quality--Code-Smell" title="Code-Quality--Code-Smell"><span class="octicon octicon-link"></span></a><span>Code Quality | Code Smell</span></h3><p><em><span>Check SonarQube</span></em></p><h3 id="Code-Quality--Technical-debt1" data-id="Code-Quality--Technical-debt"><a class="anchor hidden-xs" href="#Code-Quality--Technical-debt1" title="Code-Quality--Technical-debt1"><span class="octicon octicon-link"></span></a><span>Code Quality | Technical debt</span></h3><p><span>Cause of technical debts</span></p><ul>
+<li><span>Business pressure</span></li>
+<li><span>Lack of understanding of the consequences of technical debt</span></li>
+<li><span>Lack of tests</span></li>
+<li><span>Lack of doc</span></li>
+<li><span>Lack of interaction between team members</span></li>
+<li><span>Failing to combat the strict coherence of components</span></li>
+<li><span>Delayed refactoring</span></li>
+<li><span>lack of compliance monitoring</span></li>
+<li><span>incompetence</span></li>
+</ul><h3 id="Code-Quality--Refactoring" data-id="Code-Quality--Refactoring"><a class="anchor hidden-xs" href="#Code-Quality--Refactoring" title="Code-Quality--Refactoring"><span class="octicon octicon-link"></span></a><span>Code Quality | Refactoring</span></h3><ul>
+<li><span>Améliorer le code</span></li>
+<li><span>Pour faire les choses plus efficacement</span></li>
+<li><span>Faire un pas en arrière pour mieux avancer derrière</span></li>
+<li><img class="emoji" alt=":books:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/books.png"><span> Refactoring to patterns</span></li>
+</ul><h2 id="Testing" data-id="Testing"><a class="anchor hidden-xs" href="#Testing" title="Testing"><span class="octicon octicon-link"></span></a><span>Testing</span></h2><h3 id="Testing--Purpose" data-id="Testing--Purpose"><a class="anchor hidden-xs" href="#Testing--Purpose" title="Testing--Purpose"><span class="octicon octicon-link"></span></a><span>Testing | Purpose</span></h3><p><span>The purpose of testing is to find the defects and errors that were made during development phases.</span></p><p><em><span>There are 3 reasons to do more extensive testing:</span></em></p><ul>
+<li><span>Software quality</span>
+<ul>
+<li><span>Working as expected per requirements</span></li>
+<li><span>better user experience</span></li>
+</ul>
+</li>
+<li><span>Cost effectiveness</span>
+<ul>
+<li><span>Bugs found at late stage is much more expensive to resolve</span></li>
+</ul>
+</li>
+<li><span>Security</span>
+<ul>
+<li><span>trustworthy product, data safe and vulnerability</span></li>
+</ul>
+</li>
+</ul><h3 id="Testing--Cost-over-Time" data-id="Testing--Cost-over-Time"><a class="anchor hidden-xs" href="#Testing--Cost-over-Time" title="Testing--Cost-over-Time"><span class="octicon octicon-link"></span></a><span>Testing | Cost over Time</span></h3><p><img src="https://i.imgur.com/xdcyAxx.png" alt=""></p><h3 id="Testing--Test-Pyramid" data-id="Testing--Test-Pyramid"><a class="anchor hidden-xs" href="#Testing--Test-Pyramid" title="Testing--Test-Pyramid"><span class="octicon octicon-link"></span></a><span>Testing | Test Pyramid</span></h3><p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><br>
+<img src="https://i.imgur.com/5HDSjJo.png" alt=""></p><h3 id="Testing--Testing-strategy" data-id="Testing--Testing-strategy"><a class="anchor hidden-xs" href="#Testing--Testing-strategy" title="Testing--Testing-strategy"><span class="octicon octicon-link"></span></a><span>Testing | Testing strategy</span></h3><p><span>4 things:</span></p><ul>
+<li><strong><span>What</span></strong><span> to test?</span></li>
+<li><strong><span>How</span></strong><span> to test?</span></li>
+<li><strong><span>Who</span></strong><span> does what?</span></li>
+<li><strong><span>Where</span></strong><span> to do it?</span></li>
+</ul><h3 id="Testing--Testing-strategy1" data-id="Testing--Testing-strategy"><a class="anchor hidden-xs" href="#Testing--Testing-strategy1" title="Testing--Testing-strategy1"><span class="octicon octicon-link"></span></a><span>Testing | Testing strategy</span></h3><p><em><span>Cours de qualité</span></em><br>
+<img class="emoji" alt=":hammer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer.png"></p><h3 id="Testing--Test-types" data-id="Testing--Test-types"><a class="anchor hidden-xs" href="#Testing--Test-types" title="Testing--Test-types"><span class="octicon octicon-link"></span></a><span>Testing | Test types</span></h3><ul>
+<li><span>Unit Tests</span></li>
+<li><span>Component tests</span></li>
+<li><span>Interface testing</span></li>
+<li><span>Integration Tests</span></li>
+<li><span>End-to-end tests</span></li>
+<li><span>Acceptance Tests</span></li>
+<li><span>UI tests</span></li>
+<li><span>Functional Tests</span></li>
+<li><span>Sanity testing</span></li>
+<li><span>Regression Tests</span></li>
+<li><span>Performance Tests</span></li>
+</ul><h3 id="Testing--Test-first-approach" data-id="Testing--Test-first-approach"><a class="anchor hidden-xs" href="#Testing--Test-first-approach" title="Testing--Test-first-approach"><span class="octicon octicon-link"></span></a><span>Testing | Test first approach</span></h3><ul>
+<li><span>XP</span></li>
+<li><span>TDD</span></li>
+<li><span>BDD</span></li>
+<li><span>ATDD</span></li>
+</ul><h2 id="TDD" data-id="TDD"><a class="anchor hidden-xs" href="#TDD" title="TDD"><span class="octicon octicon-link"></span></a><span>TDD</span></h2><h3 id="TDD--Red---Green---Refactor" data-id="TDD--Red---Green---Refactor"><a class="anchor hidden-xs" href="#TDD--Red---Green---Refactor" title="TDD--Red---Green---Refactor"><span class="octicon octicon-link"></span></a><span>TDD | Red - Green - Refactor</span></h3><p><span>Write failing test -&gt; make test pass as simply as possible -&gt; improve code without modifying behaviour -&gt; write failing test</span></p><h3 id="TDD--Double-loop-TDD" data-id="TDD--Double-loop-TDD"><a class="anchor hidden-xs" href="#TDD--Double-loop-TDD" title="TDD--Double-loop-TDD"><span class="octicon octicon-link"></span></a><span>TDD | Double loop TDD</span></h3><p><img src="https://i.imgur.com/kSxxoHi.png" alt=""></p><p><img class="emoji" alt=":exclamation:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/exclamation.png"><span> TP pour le 4 juin (gitlab, maven, intellij) (</span><em><span>Teams</span></em><span>)</span></p><blockquote>
+<p><span>18/05/2020</span></p>
+</blockquote></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#SOCRA-ING" title="SOCRA (ING)">SOCRA (ING)</a><ul class="nav">
+<li><a href="#Craftmanship" title="Craftmanship">Craftmanship</a><ul class="nav">
+<li><a href="#Craftmanship--What-is-it" title="Craftmanship | What is it?">Craftmanship | What is it?</a></li>
+<li><a href="#Craftmanship--Approach" title="Craftmanship | Approach">Craftmanship | Approach</a></li>
+<li><a href="#Craftmanship--History" title="Craftmanship | History">Craftmanship | History</a></li>
+<li><a href="#Craftmanship--Values" title="Craftmanship | Values">Craftmanship | Values</a></li>
+</ul>
+</li>
+<li><a href="#Agile" title="Agile">Agile</a><ul class="nav">
+<li><a href="#Agile--Values" title="Agile | Values">Agile | Values</a></li>
+<li><a href="#Agile--Methodo" title="Agile | Methodo">Agile | Methodo</a></li>
+<li><a href="#Agile--Scrum" title="Agile | Scrum">Agile | Scrum</a></li>
+<li><a href="#Agile--Kanban" title="Agile | Kanban">Agile | Kanban</a></li>
+<li><a href="#Agile--Extreme-programming" title="Agile | Extreme programming">Agile | Extreme programming</a></li>
+<li><a href="#Agile--Agile-Devops" title="Agile | Agile Devops">Agile | Agile Devops</a></li>
+</ul>
+</li>
+<li><a href="#DevOps" title="DevOps">DevOps</a><ul class="nav">
+<li><a href="#DevOps--CALMS" title="DevOps | CALMS">DevOps | CALMS</a></li>
+<li><a href="#DevOps--Skillset" title="DevOps | Skillset">DevOps | Skillset</a></li>
+<li><a href="#DevOps--CI-amp-CD" title="DevOps | CI &amp; CD">DevOps | CI &amp; CD</a></li>
+<li><a href="#DevOps--Branching-strategy" title="DevOps | Branching strategy">DevOps | Branching strategy</a></li>
+</ul>
+</li>
+<li><a href="#Code-Quality" title="Code Quality">Code Quality</a><ul class="nav">
+<li><a href="#Code-Quality--How" title="Code Quality | How">Code Quality | How</a></li>
+<li><a href="#Code-Quality--SOLID-Principles" title="Code Quality | SOLID Principles">Code Quality | SOLID Principles</a></li>
+<li><a href="#Code-Quality--Technical-debt" title="Code Quality | Technical debt">Code Quality | Technical debt</a></li>
+<li><a href="#Code-Quality--Clean-Code" title="Code Quality | Clean Code">Code Quality | Clean Code</a></li>
+<li><a href="#Code-Quality--Code-Smell" title="Code Quality | Code Smell">Code Quality | Code Smell</a></li>
+<li><a href="#Code-Quality--Technical-debt1" title="Code Quality | Technical debt">Code Quality | Technical debt</a></li>
+<li><a href="#Code-Quality--Refactoring" title="Code Quality | Refactoring">Code Quality | Refactoring</a></li>
+</ul>
+</li>
+<li><a href="#Testing" title="Testing">Testing</a><ul class="nav">
+<li><a href="#Testing--Purpose" title="Testing | Purpose">Testing | Purpose</a></li>
+<li><a href="#Testing--Cost-over-Time" title="Testing | Cost over Time">Testing | Cost over Time</a></li>
+<li><a href="#Testing--Test-Pyramid" title="Testing | Test Pyramid">Testing | Test Pyramid</a></li>
+<li><a href="#Testing--Testing-strategy" title="Testing | Testing strategy">Testing | Testing strategy</a></li>
+<li><a href="#Testing--Testing-strategy1" title="Testing | Testing strategy">Testing | Testing strategy</a></li>
+<li><a href="#Testing--Test-types" title="Testing | Test types">Testing | Test types</a></li>
+<li><a href="#Testing--Test-first-approach" title="Testing | Test first approach">Testing | Test first approach</a></li>
+</ul>
+</li>
+<li><a href="#TDD" title="TDD">TDD</a><ul class="nav">
+<li><a href="#TDD--Red---Green---Refactor" title="TDD | Red - Green - Refactor">TDD | Red - Green - Refactor</a></li>
+<li><a href="#TDD--Double-loop-TDD" title="TDD | Double loop TDD">TDD | Double loop TDD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#SOCRA-ING" title="SOCRA (ING)">SOCRA (ING)</a><ul class="nav">
+<li><a href="#Craftmanship" title="Craftmanship">Craftmanship</a><ul class="nav">
+<li><a href="#Craftmanship--What-is-it" title="Craftmanship | What is it?">Craftmanship | What is it?</a></li>
+<li><a href="#Craftmanship--Approach" title="Craftmanship | Approach">Craftmanship | Approach</a></li>
+<li><a href="#Craftmanship--History" title="Craftmanship | History">Craftmanship | History</a></li>
+<li><a href="#Craftmanship--Values" title="Craftmanship | Values">Craftmanship | Values</a></li>
+</ul>
+</li>
+<li><a href="#Agile" title="Agile">Agile</a><ul class="nav">
+<li><a href="#Agile--Values" title="Agile | Values">Agile | Values</a></li>
+<li><a href="#Agile--Methodo" title="Agile | Methodo">Agile | Methodo</a></li>
+<li><a href="#Agile--Scrum" title="Agile | Scrum">Agile | Scrum</a></li>
+<li><a href="#Agile--Kanban" title="Agile | Kanban">Agile | Kanban</a></li>
+<li><a href="#Agile--Extreme-programming" title="Agile | Extreme programming">Agile | Extreme programming</a></li>
+<li><a href="#Agile--Agile-Devops" title="Agile | Agile Devops">Agile | Agile Devops</a></li>
+</ul>
+</li>
+<li><a href="#DevOps" title="DevOps">DevOps</a><ul class="nav">
+<li><a href="#DevOps--CALMS" title="DevOps | CALMS">DevOps | CALMS</a></li>
+<li><a href="#DevOps--Skillset" title="DevOps | Skillset">DevOps | Skillset</a></li>
+<li><a href="#DevOps--CI-amp-CD" title="DevOps | CI &amp; CD">DevOps | CI &amp; CD</a></li>
+<li><a href="#DevOps--Branching-strategy" title="DevOps | Branching strategy">DevOps | Branching strategy</a></li>
+</ul>
+</li>
+<li><a href="#Code-Quality" title="Code Quality">Code Quality</a><ul class="nav">
+<li><a href="#Code-Quality--How" title="Code Quality | How">Code Quality | How</a></li>
+<li><a href="#Code-Quality--SOLID-Principles" title="Code Quality | SOLID Principles">Code Quality | SOLID Principles</a></li>
+<li><a href="#Code-Quality--Technical-debt" title="Code Quality | Technical debt">Code Quality | Technical debt</a></li>
+<li><a href="#Code-Quality--Clean-Code" title="Code Quality | Clean Code">Code Quality | Clean Code</a></li>
+<li><a href="#Code-Quality--Code-Smell" title="Code Quality | Code Smell">Code Quality | Code Smell</a></li>
+<li><a href="#Code-Quality--Technical-debt1" title="Code Quality | Technical debt">Code Quality | Technical debt</a></li>
+<li><a href="#Code-Quality--Refactoring" title="Code Quality | Refactoring">Code Quality | Refactoring</a></li>
+</ul>
+</li>
+<li><a href="#Testing" title="Testing">Testing</a><ul class="nav">
+<li><a href="#Testing--Purpose" title="Testing | Purpose">Testing | Purpose</a></li>
+<li><a href="#Testing--Cost-over-Time" title="Testing | Cost over Time">Testing | Cost over Time</a></li>
+<li><a href="#Testing--Test-Pyramid" title="Testing | Test Pyramid">Testing | Test Pyramid</a></li>
+<li><a href="#Testing--Testing-strategy" title="Testing | Testing strategy">Testing | Testing strategy</a></li>
+<li><a href="#Testing--Testing-strategy1" title="Testing | Testing strategy">Testing | Testing strategy</a></li>
+<li><a href="#Testing--Test-types" title="Testing | Test types">Testing | Test types</a></li>
+<li><a href="#Testing--Test-first-approach" title="Testing | Test first approach">Testing | Test first approach</a></li>
+</ul>
+</li>
+<li><a href="#TDD" title="TDD">TDD</a><ul class="nav">
+<li><a href="#TDD--Red---Green---Refactor" title="TDD | Red - Green - Refactor">TDD | Red - Green - Refactor</a></li>
+<li><a href="#TDD--Double-loop-TDD" title="TDD | Double loop TDD">TDD | Double loop TDD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
