@@ -10,6 +10,8 @@ sécu qui n'ont pas été écrites sur HackMD.
 **/!\ HackMD gère les sauts de ligne différemment de Github et les notes sont
 écrites en pandoc, d'où le rendu bizarre sur Github. /!\\**
 
+Les notes sont lisibles en ligne sur **[ce site](https://shaigrorb.github.io/notes-epita-ing/)**.
+
 ## Liens des notes sur HackMD
 
 * [APIN](https://hackmd.io/@tYTq4U8GTF2YypVkdVWotA/ryY42FL84)
