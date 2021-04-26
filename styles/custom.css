@@ -5,3 +5,12 @@ body div {
 .is-one-third-width {
     width: 33%;
 }
+
+.card.bg-dark {
+    box-shadow: 0 1px 3px var(--color-success);
+    -webkit-box-shadow: 0 1px 3px var(--color-grey);
+}
+
+.card.bg-dark a {
+    color: var(--color-success);
+}

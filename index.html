@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="./styles/custom.css">
 </head>
 
-<body>
+<body class="">
+    <div class="is-fixed">
+        <button class="button icon-only clear" onclick="openGithubRepo()">
+            <img id="icon-github" src="https://icongr.am/jam/github.svg?size=36">
+        </button>
+        <button class="button icon-only clear" onclick="toggleDarkMode()">
+            <img id="icon-moon" src="https://icongr.am/jam/moon-f.svg?size=36">
+        </button>
+    </div>
+
     <div class="is-center">
         <article class="card">
             <header>
@@ -131,6 +140,60 @@
     </div>
 
     <!-- PS: Si vous avez une gourde de l'EPITA, je suis toujours preneur 😉 -->
+
+    <script>
+        function openGithubRepo() {
+            window.open('https://github.com/ShaigroRB/notes-epita-ing')
+        }
+
+        
+        const github = document.getElementById('icon-github');
+        const moon = document.getElementById('icon-moon');
+        const body = document.getElementsByTagName('body')[0];
+        const cards = document.getElementsByClassName('card');
+        const fullMoonSrc = "https://icongr.am/jam/moon-f.svg?size=36";
+        const emptyMoonSrc = "https://icongr.am/jam/moon.svg?size=36&color=ffffff";
+        const darkGithub = "https://icongr.am/jam/github.svg?size=36";
+        const whiteGithub = "https://icongr.am/jam/github.svg?size=36&color=ffffff";
+
+        let isDarkMode = true;
+
+        function setAllCardsClassNames(className) {
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+                card.className = "card " + className;
+                if (i != 0) {
+                    card.className += " is-one-third-width"
+                }
+            }
+        }
+
+        function setLightMode() {
+            moon.src = fullMoonSrc;
+            github.src = darkGithub;
+            body.className = "";
+            setAllCardsClassNames("");
+        }
+
+        function setDarkMode() {
+            moon.src = emptyMoonSrc;
+            github.src = whiteGithub;
+            body.className = "text-light bg-dark"
+            setAllCardsClassNames("text-light bg-dark bd-light")
+        }
+
+        function toggleDarkMode() {
+
+            isDarkMode = !isDarkMode;
+
+            if (isDarkMode) {
+                setLightMode();
+            }
+            else {
+                setDarkMode();
+            }
+        }
+    </script>
 </body>
 
 </html>
