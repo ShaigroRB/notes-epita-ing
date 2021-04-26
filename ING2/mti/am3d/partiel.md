@@ -1,4 +1,133 @@
+---
+tags: mti, ing2, partiel
+---
+
 # Partiel AM3D - Robin Boucher (bouche_7)
+
+:::spoiler **Enoncé du partiel**
+## Partie 1 (8 points)
+Le jeu a été révélé lors d’un grand salon, et le public a pu tester une démo jouable. De nombreuses personnes ont eu du mal à comprendre l’histoire : elles étaient bloquées car elles ne savaient pas où aller.
+
+Alice propose que le personnage central donne des indications au·à la joueur·se lorsque aucune action n’a été faite pendant les dix dernières secondes. Elle propose de donner des indications également à des endroits spécifiques, où les tests ont montrés que les joueur·euse·s se perdaient le plus souvent.
+
+Alice a d’ailleurs commencé à implémenter ce système. Elle ajoute la classe ++HintManager++ qui gère les indications. Les classes ++HintLocator++ et ++IdleHintArea++ sont responsables de porter les données des indications. Voici des extraits :
+
+```cpp
+void MainCharacter::updateHints()
+{
+    if (this->lastActionTime + IDLE_HINT_DELAY < Time::now())
+    {
+        HintManager::instance().giveIdleHint();
+    }
+}
+
+void IdleHintArea::onEnter(Entity & entity)
+{
+    if (entity == MainCharacter::instance())
+    {
+        MainCharacter::instance().setIdleMessage(this->message);
+    }
+}
+
+void HintLocator::onEnter(Entity & entity)
+{
+    if (entity == MainCharacter::instance())
+    {
+        HintManager::instance().triggerMessage(this->message);
+    }
+}
+
+void HintManager::giveIdleHint()
+{
+    auto message = MainCharacter::getIdleMessage();
+    this->triggerMessage(message);
+}
+
+```
+**_Quels sont les problèmes d’architecture de ce système ? (2 points)_**
+
+**_Proposez une nouvelle conception du système, qui remédie à ces problèmes. (3 points)_**
+
+**_Proposez des tests unitaires qui garantissent qu’une indication doit être affichée au bout du délai, compté à partir de la dernière action. Une nouvelle action remet à zéro le chronomètre. (3 points)_**
+Pensez bien que les tests doivent s'exécuter le plus vite possible : il ne faut pas perdre du temps à attendre “pour de vrai”. Il n’est pas demandé d’implémenter les fonctions appelées dans le test.
+
+## Partie 2 (5 points)
+Bob a développé un système de quête assez complexe. Plusieurs quêtes peuvent être réunies dans un même groupe, une sorte de méga-quête. Bien sûr, une méga-quête peut elle-même faire partie d’un groupe encore plus grand, et ainsi de suite.
+
+Il y a régulièrement des traitements à faire sur la liste de quête. Par exemple, il faut obtenir la liste des quêtes terminées. Un groupe de quête est terminé si et seulement si tous ses éléments (quêtes ou sous-groupes) sont terminés. Voici l’extrait du code qui détermine si une quête est terminée :
+
+```cpp
+bool QuestManager::isQuestCompleted(AbstractQuest * quest)
+{
+    auto questGroup = dynamic_cast<QuestGroup *>(quest);
+    if (questGroup != nullptr)
+    {
+    // The quest is actually a quest group.
+        for (auto subquest : questGroup->subquests)
+        {
+            if (!this->isQuestCompleted(subquest))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    else
+    {
+        // The quest is a real quest: get its status.
+        auto actualQuest = dynamic_cast<Quest *>(quest);
+        return actualQuest->status == QuestStatus::Completed;
+    }
+}
+```
+
+Il existe de très nombreuses fonctions qui sont des copier-collers de celle-ci avec quelques modifications. Par exemple, voici la fonction qui donne une estimation du temps restant avant de finir toutes les quêtes en cours :
+
+```cpp
+Duration QuestManager::getDurationEstimateTillCompletion(AbstractQuest * quest)
+{
+    auto questGroup = dynamic_cast<QuestGroup *>(quest);
+    if (questGroup != nullptr)
+    {
+        // The quest is actually a quest group.
+        Duration sum;
+        for (auto subquest : questGroup->subquests)
+        {
+            sum += this->getDurationEstimateTillCompletion(subquest)
+        }
+        return sum;
+    }
+    else
+    {
+        // The quest is a real quest: get its status.
+        auto actualQuest = dynamic_cast<Quest *>(quest);
+        return actualQuest->durationEstimate;
+    }
+}
+```
+
+Bob avait l’habitude de copier-coller des bouts de code, mais depuis que vous avez intégré l’équipe, il a compris que ce n’était pas une bonne pratique de développement. Il se dit qu’il doit y avoir un moyen d’enlever ces duplications de code, mais il ne sait pas comment faire et vous appelle à l’aide.
+
+**_Proposez une conception qui enlève les duplications de code (3 points) et un test unitaire (2 points)_** qui puisse servir d’exemple à Bob pour adapter ses fonctions. Il n’est pas demandé d’implémenter les fonctions appelées dans le test.
+
+## Partie 3 (7 points)
+A un certain moment de l’histoire, le personnage principal acquiert la capacité de remonter dans le temps pour modifier ses choix.
+
+Alice et Bob, prenant exemple sur vous, voudraient commencer le développement de cette feature en écrivant un test unitaire. Mais ils se rendent compte que ce n’est pas facile : les actions influent d’autres systèmes, par exemple le système d’inventaire, développé par une autre équipe. Vous voulez donc changer le système afin de le rendre plus facilement testable : il faut pouvoir s’assurer que les actions agissent puis s’annulent comme attendu, sans nécessiter la création d’autres systèmes à côté.
+
+**_Proposez une solution qui permette d’annuler des actions. (3 points)_**
+
+Cette conception doit être facilement testable.
+
+**_Proposez des tests unitaires pour garantir : (4 points)_**
+1. Qu’une action peut être annulée, auquel cas les autres systèmes (e.g. inventaire) sont mis à jour également.
+2. Qu’on ne peut pas annuler plus d’actions que le nombre d’action qu’on a fait.
+3. Que si on annule une action et qu’on fait une autre action, c’est bien le résultat de la nouvelle action qu’on obtient.
+
+Il n’est pas demandé d’implémenter les fonctions appelées dans les tests.
+:::
+
+:::spoiler **Mon rendu**
 
 ## Partie 1
 ### Quels sont les problèmes d’architecture de ce système ? (2 points)
@@ -101,3 +230,5 @@ Dans notre cas, on a un index correspondant à l'index de l'action courante et u
    2. on execute la commande ouvrir une porte
    3. on annule la commande deux fois
    4. on verifie qu'on ne bouge pas
+
+:::
