@@ -4,6 +4,16 @@
 <head>
     <link rel="stylesheet" href="./styles/chota.min.css">
     <link rel="stylesheet" href="./styles/custom.css">
+    <style>
+        .card.bg-dark {
+            box-shadow: 0 1px 3px var(--color-success);
+            -webkit-box-shadow: 0 1px 3px var(--color-grey);
+        }
+
+        .card.bg-dark a {
+            color: var(--color-success);
+        }
+    </style>
 </head>
 
 <body class="">
@@ -146,7 +156,7 @@
             window.open('https://github.com/ShaigroRB/notes-epita-ing')
         }
 
-        
+
         const github = document.getElementById('icon-github');
         const moon = document.getElementById('icon-moon');
         const body = document.getElementsByTagName('body')[0];
